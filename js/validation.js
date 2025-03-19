@@ -41,7 +41,12 @@ $(document).ready(function () {
       const isPhoneValid = await phoneNumberValidation();
       const isPhoneFormatted = phoneFormat();
       const isEmailValid = validateEmail($("#Email").val());
-      if (!isMandatoryFilled || !isPhoneValid || !isPhoneFormatted || !isEmailValid) {
+      if (
+        !isMandatoryFilled ||
+        !isPhoneValid ||
+        !isPhoneFormatted ||
+        !isEmailValid
+      ) {
         return false;
       }
     }
@@ -181,6 +186,7 @@ function zf_CheckMandatory() {
 }
 
 function zf_CheckMandatory1() {
+  debugger;
   for (i = 0; i < zf_MandArray1.length; i++) {
     var fieldObj = document.forms.form[zf_MandArray1[i]];
     if (fieldObj) {
@@ -711,13 +717,14 @@ function hideError(elementId) {
 
 function validateEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if(emailRegex.test(email)){
-    document.getElementById('Email_error').textContent = '';
-    document.getElementById('Email_error').style.display = "none";
-  }else{
-    document.getElementById('Email_error').textContent = '';
-    document.getElementById('Email_error').textContent = 'Please enter a valid email address.';
-    document.getElementById('Email_error').style.display = "block";
+  if (emailRegex.test(email)) {
+    document.getElementById("Email_error").textContent = "";
+    document.getElementById("Email_error").style.display = "none";
+  } else {
+    document.getElementById("Email_error").textContent = "";
+    document.getElementById("Email_error").textContent =
+      "Please enter a valid email address.";
+    document.getElementById("Email_error").style.display = "block";
   }
   return emailRegex.test(email);
 }

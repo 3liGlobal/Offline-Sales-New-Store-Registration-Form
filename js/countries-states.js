@@ -359,6 +359,10 @@ var States = {
 
 var countriesWithState = ["USA", "CAN"];
 
+var original_zf_MandArray = [
+  "Address_Region",
+];
+
 window.onload = function () {
   setupDropdown(
       "countryF1",

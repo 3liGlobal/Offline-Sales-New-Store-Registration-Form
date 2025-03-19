@@ -453,9 +453,9 @@ function updateStateDropdown(
 
 function updateCityDropdown(stateDropdown, stateLabel, stateText) {
   if (stateDropdown.selectedIndex > 0) {
-      const selectedStateText = stateDropdown.selectedOptions[0].text;
-      stateLabel.value = selectedStateText; // Update state label
-      stateText.value = selectedStateText; // Ensure stateText input gets updated
+      const selectedStateText = stateDropdown.selectedOptions[0]
+      stateLabel.value = stateDropdown.selectedOptions[0].text; // Update state label
+      stateText.value = stateDropdown.selectedOptions[0].value; // Ensure stateText input gets updated
   } else {
       stateLabel.value = "";
       stateText.value = "";

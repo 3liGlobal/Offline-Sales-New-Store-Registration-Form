@@ -18,7 +18,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/google-libphonenumber/3.2.13/libphonenumber.min.js"></script>
   <script src="js/validation.js"></script>
-  <script src="js/countries-states.js"></script>
+  <style>
+    .state-dropdown,
+    .state-dropdown-v2,
+    .state-text,
+    .state-text-v2
+      {
+      display: none;
+    }
+  </style>
 </head>
 
 <body class="zf-backgroundBg">
@@ -101,8 +109,8 @@
                 </label>
                 <div class="zf-tempContDiv">
                   <span>
-                    <input fieldType="9" type="text" maxlength="255" name="Email" checktype="c5" value=""
-                      placeholder="" id="Email"/></span>
+                    <input fieldType="9" type="text" maxlength="255" name="Email" checktype="c5" value="" placeholder=""
+                      id="Email" /></span>
                   <p id="Email_error" class="zf-errorMessage" style="display: none">
                     Invalid value
                   </p>
@@ -537,10 +545,13 @@
                       </div>
                       <div class="col2">
                         <label class="zf-labelName">State &#x2f; Region &#x2f; Province
-                          <em class="zf-important">*</em>
+                          <em class="zf-important star" id="state_star">*</em>
                         </label>
-                        <input type="text" maxlength="255" name="Address_Region" checktype="c1" placeholder=""
-                          id="state-dropdown" />
+                        <select class="state-dropdown" checktype="c1" placeholder="">
+                          <option value="" selected="selected" name="Address_Region">Select State</option>
+                        </select>
+                        <input type="text" class="state-text" checktype="c1" name="Address_Region" placeholder=""
+                          autocomplete="off">
                       </div>
                     </div>
                     <div class="main-f">
@@ -588,7 +599,7 @@
               </li>
               <!---------Decision Ends Here---------->
               <!---------Dropdown Starts Here---------->
-              <div id="addressType">
+              <div id="addressType" style="display: none;">
                 <div class="main-f">
                   <div class="col1">
                     <li class="zf-tempFrmWrapper zf-small">
@@ -846,8 +857,11 @@
                           <label class="zf-labelName">
                             State &#x2f; Region &#x2f; Province
                             <em class="zf-important" id="required_addressType">*</em></label>
-                          <input type="text" maxlength="255" name="Address1_Region" checktype="c1" placeholder=""
-                            id="state-dropdownV2" />
+                            <select class="state-dropdown-v2" checktype="c1" placeholder="" name="Address1_Region">
+                              <option value="" selected="selected">Select State</option>
+                            </select>
+                            <input type="text" class="Address1_Region state-text-v2" name="Address1_Region" placeholder=""
+                              autocomplete="off">
                         </div>
                       </div>
                       <div class="main-f">
@@ -1221,6 +1235,7 @@
       document.getElementById("expirationDate1").setAttribute("min", tomorrow);
     });
   </script>
+   <script src="js/countries-states.js"></script>
   <script>
     document
       .getElementById("expirationDate")
@@ -1368,8 +1383,7 @@
           $("#searchInput").val(option.Street)
           $("#cityV1").val(option.City)
           $("#stateLabel").val(option.ProvinceCode)
-          $("#state-dropdown").val(option.ProvinceName)
-          // $(".state-dropdown").val(option.ProvinceCode).change();
+          $(".state-dropdown").val(option.ProvinceCode).change();
           $("#postalCode").val(option.PostalCode)
           $("#suite_unit_apt_box_v1").val(option.SubBuilding)
           dropdownList.empty();
@@ -1454,7 +1468,7 @@
           $("#searchAddress2").val(option.Street)
           $("#cityV2").val(option.City)
           $("#stateLabelV2").val(option.ProvinceCode)
-          $("#state-dropdownV2").val(option.ProvinceName)
+          $(".state-dropdown-v2").val(option.ProvinceCode).change();
           $("#postalCodeV2").val(option.PostalCode)
           $("#suite_unit_apt_box_v2").val(option.SubBuilding)
           dropdownListSameAsBilling.empty();

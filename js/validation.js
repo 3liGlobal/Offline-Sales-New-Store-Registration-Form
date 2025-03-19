@@ -36,7 +36,6 @@ $(document).ready(function () {
   $(".next").click(async function () {
     current_fs = $(this).closest("fieldset");
     next_fs = current_fs.next("fieldset");
-
     if (current === 1) {
       const isMandatoryFilled = zf_CheckMandatory();
       const isPhoneValid = await phoneNumberValidation();

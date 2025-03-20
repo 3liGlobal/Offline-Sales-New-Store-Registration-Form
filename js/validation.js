@@ -52,9 +52,23 @@ $(document).ready(function () {
     }
 
     if (current === 2) {
-      if (!zf_CheckMandatory1()) return false;
-      if (!$("#DecisionBox3").is(":checked") && !zf_CheckMandatory2())
+      const isMandatoryFilledv1 = zf_CheckMandatory1();
+      const isMandatoryFilledv2 = zf_CheckMandatory2();
+      if (!isMandatoryFilledv1){
         return false;
+      }
+
+      let region = document.getElementById("Regionv2").value.trim();
+      debugger
+      if (!$("#DecisionBox3").is(":checked") && region == ""){
+
+        zf_ShowErrorMsg('Address1_Region');
+        return false;
+      }
+
+      if (!$("#DecisionBox3").is(":checked") && !isMandatoryFilledv2 && region == ""){
+        return false;
+      }
     }
 
     $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -186,7 +200,6 @@ function zf_CheckMandatory() {
 }
 
 function zf_CheckMandatory1() {
-  debugger;
   for (i = 0; i < zf_MandArray1.length; i++) {
     var fieldObj = document.forms.form[zf_MandArray1[i]];
     if (fieldObj) {

@@ -361,6 +361,7 @@ var countriesWithState = ["USA", "CAN"];
 
 var original_zf_MandArray = [
   "Address_Region",
+  "Address1_Region",
 ];
 
 window.onload = function () {

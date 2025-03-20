@@ -80,7 +80,9 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-
+.iti__country {
+  display: flex;
+}
 body {
   background-attachment: fixed;
   color: #444444;
@@ -1565,7 +1567,7 @@ color: #6C6D73;
 .dropdown-list {
   position: absolute;
   background: #f5f5f5;
-  width: 98%;
+  width: 49%;
   z-index: 10;
   border-radius: 5px;
   max-height: 300px;

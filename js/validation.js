@@ -58,15 +58,14 @@ $(document).ready(function () {
         return false;
       }
 
-      let region = document.getElementById("Regionv2").value.trim();
-      debugger
-      if (!$("#DecisionBox3").is(":checked") && region == ""){
+      // let region = document.getElementById("Regionv2").value.trim();
+      // if (!$("#DecisionBox3").is(":checked") && region == ""){
 
-        zf_ShowErrorMsg('Address1_Region');
-        return false;
-      }
+      //   zf_ShowErrorMsg('Address1_Region');
+      //   return false;
+      // }
 
-      if (!$("#DecisionBox3").is(":checked") && !isMandatoryFilledv2 && region == ""){
+      if (!$("#DecisionBox3").is(":checked") && !isMandatoryFilledv2){
         return false;
       }
     }

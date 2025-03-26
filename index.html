@@ -1390,19 +1390,40 @@
       }
     });
   </script>
-      <script>
-        var input = document.querySelector(
-          "#international_PhoneNumber_countrycode"
-        );
-        function setInitialPhoneNumber() {
-          var countryData = iti.getSelectedCountryData();
-          input.value = `+${countryData.dialCode} `;
+  <script>
+    var input = document.querySelector(
+      "#international_PhoneNumber_countrycode"
+    );
+    function setInitialPhoneNumber() {
+      var countryData = iti.getSelectedCountryData();
+      input.value = `+${countryData.dialCode} `;
+    }
+    setTimeout(setInitialPhoneNumber, 100);
+    input.addEventListener("countrychange", function () {
+      setInitialPhoneNumber();
+    });
+   </script>  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const input = document.getElementById("searchInput");
+      
+      document.addEventListener("click", function (event) {
+        const loqateDropdown = document.querySelector(".dropdown-list"); // Ensure this matches Loqate's dropdown class
+  
+        if (!input.contains(event.target) && loqateDropdown && !loqateDropdown.contains(event.target)) {
+          loqateDropdown.style.display = "none"; // Hide the dropdown
         }
-        setTimeout(setInitialPhoneNumber, 100);
-        input.addEventListener("countrychange", function () {
-          setInitialPhoneNumber();
-        });
-      </script>  
+      });
+  
+      // Make sure Loqate dropdown reappears when user types
+      input.addEventListener("input", function () {
+        const loqateDropdown = document.querySelector(".dropdown-list");
+        if (loqateDropdown) {
+          loqateDropdown.style.display = "block"; // Show dropdown when typing
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

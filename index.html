@@ -81,14 +81,14 @@
                         <label class="zf-labelName">First Name
                           <em class="zf-important">*</em>
                         </label>
-                        <input type="text" maxlength="255" name="Name_First" fieldType="7" placeholder="" />
+                        <input type="text" maxlength="255" name="Name_First" fieldType="7" placeholder="" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')"/>
                       </div>
 
                       <div class="col2">
                         <label class="zf-labelName">Last Name
                           <em class="zf-important">*</em>
                         </label>
-                        <input type="text" maxlength="255" name="Name_Last" fieldType="7" placeholder="" />
+                        <input type="text" maxlength="255" name="Name_Last" fieldType="7" placeholder="" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')"/>
                       </div>
                     </div>
 

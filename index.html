@@ -1406,20 +1406,16 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const input = document.getElementById("searchInput");
-      
       document.addEventListener("click", function (event) {
-        const loqateDropdown = document.querySelector(".dropdown-list"); // Ensure this matches Loqate's dropdown class
-  
+        const loqateDropdown = document.querySelector(".dropdown-list");
         if (!input.contains(event.target) && loqateDropdown && !loqateDropdown.contains(event.target)) {
-          loqateDropdown.style.display = "none"; // Hide the dropdown
+          loqateDropdown.style.display = "none";
         }
       });
-  
-      // Make sure Loqate dropdown reappears when user types
       input.addEventListener("input", function () {
         const loqateDropdown = document.querySelector(".dropdown-list");
         if (loqateDropdown) {
-          loqateDropdown.style.display = "block"; // Show dropdown when typing
+          loqateDropdown.style.display = "block"; 
         }
       });
     });

@@ -860,21 +860,26 @@
                 <!--fileupload-->
                 <!---------File Upload Starts Here---------->
                 <li class="zf-tempFrmWrapper">
-                  <label class="zf-labelName">Resale&#x2f;Sales Tax License</label>
+                  <label class="zf-labelName">Resale/Sales Tax License</label>
                   <div class="zf-tempContDiv">
-                    <label for="fileInput" class="dropzone">
+                    <label for="fileInput2" class="dropzone" id="dropzoneContainer2">
                       <i class="fa-solid fa-arrow-up-from-bracket"></i>
                       <p>
                         <strong>Drag & Drop</strong>
-                        <span id="browse">Browse for files</span>
+                        <span>Browse for files</span>
                       </p>
                       <p class="subtext">
-                        Upload PDF, ZIP, doc, or Image (jpg, png, tif, gif,
-                        webp)
+                        Upload PDF, ZIP, doc, or Image (jpg, png, tif, gif, webp)
                       </p>
-                      <p id="fileNameDisplay" class="file-name" style="display: none"></p>
                     </label>
-                    <input type="file" name="FileUpload3" id="fileInput" hidden />
+                    <input type="file" name="FileUpload3" id="fileInput2" hidden />
+                
+                    <div id="filePreview2" class="file-preview">
+                      <i class="fa-solid fa-file"></i>
+                      <p id="fileText2"></p>
+                      <i class="fa-solid fa-trash remove-file" id="removeFile2"></i>
+                    </div>
+                
                     <p id="FileUpload3_error" class="zf-errorMessage" style="display: none">
                       Choose any file for this field.
                     </p>
@@ -952,19 +957,24 @@
                 <li class="zf-tempFrmWrapper">
                   <label class="zf-labelName">State Tobacco License</label>
                   <div class="zf-tempContDiv">
-                    <label for="fileInput1" class="dropzone">
+                    <label for="fileInput1" class="dropzone" id="dropzoneContainer1">
                       <i class="fa-solid fa-arrow-up-from-bracket"></i>
                       <p>
                         <strong>Drag & Drop</strong>
-                        <span id="browse">Browse for files</span>
+                        <span>Browse for files</span>
                       </p>
                       <p class="subtext">
-                        Upload PDF, ZIP, doc, or Image (jpg, png, tif, gif,
-                        webp)
+                        Upload PDF, ZIP, doc, or Image (jpg, png, tif, gif, webp)
                       </p>
-                      <p id="fileNameDisplay1" class="file-name" style="display: none"></p>
                     </label>
                     <input type="file" name="FileUpload2" id="fileInput1" hidden />
+                
+                    <div id="filePreview1" class="file-preview">
+                      <i class="fa-solid fa-file"></i>
+                      <p id="fileText1"></p>
+                      <i class="fa-solid fa-trash remove-file" id="removeFile1"></i>
+                    </div>
+                
                     <p id="FileUpload2_error" class="zf-errorMessage" style="display: none">
                       Choose any file for this field.
                     </p>
@@ -1419,6 +1429,37 @@
         }
       });
     });
+  </script>
+  <script>
+    function setupFileUpload(inputId, previewId, textId, removeId, dropzoneId, errorId) {
+      let fileInput = document.getElementById(inputId);
+      let filePreview = document.getElementById(previewId);
+      let fileText = document.getElementById(textId);
+      let removeFile = document.getElementById(removeId);
+      let dropzone = document.getElementById(dropzoneId);
+      let errorMessage = document.getElementById(errorId);
+  
+      fileInput.addEventListener("change", function () {
+        if (this.files.length > 0) {
+          fileText.textContent = this.files[0].name;
+          filePreview.style.display = "flex";  // Show file preview
+          dropzone.style.display = "none";  // Hide dropzone
+          errorMessage.style.display = "none";  // Hide error message
+        }
+      });
+  
+      removeFile.addEventListener("click", function () {
+        fileInput.value = "";  // Clear file input
+        fileText.textContent = "";
+        filePreview.style.display = "none";  // Hide file preview
+        dropzone.style.display = "block";  // Show dropzone again
+        errorMessage.style.display = "block";  // Show error message again
+      });
+    }
+  
+    // Initialize file upload functionality for both fields
+    setupFileUpload("fileInput1", "filePreview1", "fileText1", "removeFile1", "dropzoneContainer1", "FileUpload2_error");
+    setupFileUpload("fileInput2", "filePreview2", "fileText2", "removeFile2", "dropzoneContainer2", "FileUpload3_error");
   </script>
 </body>
 

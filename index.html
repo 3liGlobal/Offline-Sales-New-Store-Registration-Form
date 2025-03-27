@@ -111,9 +111,9 @@
                   <span>
                     <input fieldType="9" type="text" maxlength="255" name="Email" checktype="c5" value="" placeholder=""
                       id="Email" /></span>
-                  <p id="Email_error" class="zf-errorMessage" style="display: none">
-                    Invalid value
-                  </p>
+                      <p id="Email_error" class="zf-errorMessage" style="display:none;">Please complete
+                        this required field.
+                      </p>
                 </div>
                 <div class="zf-clearBoth"></div>
               </li>
@@ -1437,6 +1437,41 @@
     setupFileUpload("fileInput1", "filePreview1", "fileText1", "removeFile1", "dropzoneContainer1", "FileUpload2_error");
     setupFileUpload("fileInput2", "filePreview2", "fileText2", "removeFile2", "dropzoneContainer2", "FileUpload3_error");
   </script>
+  <!-- close the loqate dropdown -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const input = document.getElementById("searchInput");
+      document.addEventListener("click", function (event) {
+        const loqateDropdown = document.querySelector(".dropdown-list");
+        if (!input.contains(event.target) && loqateDropdown && !loqateDropdown.contains(event.target)) {
+          loqateDropdown.style.display = "none";
+        }
+      });
+      input.addEventListener("input", function () {
+        const loqateDropdown = document.querySelector(".dropdown-list");
+        if (loqateDropdown) {
+          loqateDropdown.style.display = "block"; 
+        }
+      });
+    });
+  </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const input = document.getElementById("searchAddress2");
+        document.addEventListener("click", function (event) {
+          const loqateDropdown = document.querySelector(".dropdown-list-SameASBilling");
+          if (!input.contains(event.target) && loqateDropdown && !loqateDropdown.contains(event.target)) {
+            loqateDropdown.style.display = "none";
+          }
+        });
+        input.addEventListener("input", function () {
+          const loqateDropdown = document.querySelector(".dropdown-list-SameASBilling");
+          if (loqateDropdown) {
+            loqateDropdown.style.display = "block"; 
+          }
+        });
+      });
+    </script>
 </body>
 
 </html>

@@ -39,9 +39,9 @@ $(document).ready(function () {
     if (current === 1) {
       const isMandatoryFilled = zf_CheckMandatory();
       const isPhoneValid = await phoneNumberValidation();
+      const isEmailValid = validateEmail($("#Email").val());
       const isEmailexist = await validate_Email()
       const isPhoneFormatted = phoneFormat();
-      const isEmailValid = validateEmail($("#Email").val());
       if (
         !isMandatoryFilled ||
         !isPhoneValid ||
@@ -639,8 +639,7 @@ function validate_Email() {
         })
         .then((data) => {
           if (data.flag) {
-            document.getElementById("Email_error").innerText =
-              "Email Already Exist";
+            document.getElementById("Email_error").innerText = "Email Already Exist";
             document.getElementById("Email_error").style.display = "block";
             myResolve(false);
           } else {

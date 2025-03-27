@@ -1122,33 +1122,6 @@
       });
   </script>
   <script>
-    document
-      .getElementById("fileInput")
-      .addEventListener("change", function (event) {
-        let fileNameDisplay = document.getElementById("fileNameDisplay");
-        if (this.files.length > 0) {
-          fileNameDisplay.textContent = this.files[0].name;
-          fileNameDisplay.style.display = "block";
-        } else {
-          fileNameDisplay.style.display = "none";
-        }
-      });
-  </script>
-  <script>
-    document
-      .getElementById("fileInput1")
-      .addEventListener("change", function (event) {
-        let fileNameDisplay = document.getElementById("fileNameDisplay1");
-        if (this.files.length > 0) {
-          fileNameDisplay.textContent = this.files[0].name;
-          fileNameDisplay.style.display = "block";
-        } else {
-          fileNameDisplay.style.display = "none";
-        }
-      });
-  </script>
-
-  <script>
     const dropdownList = $(".dropdown-list");
 
     function fetchData(query, callback) {
@@ -1227,9 +1200,8 @@
     }
     var input = document.querySelector("#international_PhoneNumber_countrycode");
 		input.addEventListener("input", function () {
-			// If "+" is removed, add it back
 			if (!input.value.startsWith("+")) {
-				input.value = "+" + input.value.replace(/[^0-9]/g, ''); // Only allow digits after "+"
+				input.value = "+" + input.value.replace(/[^0-9]/g, '');
 			}
 		});
     function getAddressDetail(e, thisObj) {
@@ -1317,7 +1289,12 @@
         });
       });
     }
-
+    var inputbill = document.querySelector("#international_PhoneNumber1_countrycode");
+		inputbill.addEventListener("input", function () {
+			if (!inputbill.value.startsWith("+")) {
+				inputbill.value = "+" + inputbill.value.replace(/[^0-9]/g, '');
+			}
+		});
     function getAddressDetailSameAsBilling(e, thisObj) {
       let id = thisObj.id;
       const query = `https://api.addressy.com/Capture/Interactive/Retrieve/v1.2/json3.ws?Key=TY78-BD75-NW81-XE97&Id=${id}`;
@@ -1336,55 +1313,79 @@
     }
 
 
-    var iti = window.intlTelInput(document.querySelector("#international_PhoneNumber_countrycode"), {
-      separateDialCode: false,
-      preferredCountries: ["US"],
-      allowDropdown: true,
-      hiddenInput: "full",
-      utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js",
-      onlyCountries: [
-        "AX", "AS", "AD", "AI", "AR", "AM", "AW", "AT", "BS", "BH", "BD", "BB",
-        "BE", "BZ", "BM", "BO", "BA", "BR", "IO", "VG", "BG", "KH", "CA", "KY",
-        "CL", "CN", "CX", "CC", "CO", "CK", "CR", "HR", "CY", "CZ", "DK", "DM",
-        "DO", "EC", "SV", "EE", "FK", "FO", "FJ", "FI", "GE", "DE", "GI", "GR",
-        "GL", "GD", "GP", "GU", "GT", "GG", "HM", "HN", "HK", "HU", "IS", "IN",
-        "ID", "IQ", "IE", "IM", "IT", "JM", "JP", "JE", "JO", "KZ", "KI", "KW",
-        "KG", "LV", "LB", "LI", "LT", "LU", "MO", "MY", "MV", "MT", "MH", "MQ",
-        "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "NR", "NP", "NL", "NC",
-        "NI", "NU", "NF", "MK", "MP", "NO", "OM", "PW", "PA", "PG", "PY", "PE",
-        "PH", "PN", "PL", "PT", "QA", "SM", "SA", "RS", "SG", "SK", "SI", "SB",
-        "ZA", "GS", "KR", "ES", "LK", "BL", "SH", "KN", "LC", "MF", "PM", "VC",
-        "SJ", "SE", "CH", "TW", "TJ", "TH", "TO", "TT", "TR", "TC", "UM", "VI",
-        "UA", "AE", "GB", "US", "UY", "UZ", "VA", "VE", "VN", "WF", "EH"
-      ],
-    });
-    // Mobile Phone	
-    var iti1 = window.intlTelInput(document.querySelector("#international_PhoneNumber1_countrycode"), {
-      separateDialCode: false,
-      preferredCountries: ["US"],
-      allowDropdown: true,
-      hiddenInput: "full",
-      utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js",
-      onlyCountries: [
-        "AX", "AS", "AD", "AI", "AR", "AM", "AW", "AT", "BS", "BH", "BD", "BB",
-        "BE", "BZ", "BM", "BO", "BA", "BR", "IO", "VG", "BG", "KH", "CA", "KY",
-        "CL", "CN", "CX", "CC", "CO", "CK", "CR", "HR", "CY", "CZ", "DK", "DM",
-        "DO", "EC", "SV", "EE", "FK", "FO", "FJ", "FI", "GE", "DE", "GI", "GR",
-        "GL", "GD", "GP", "GU", "GT", "GG", "HM", "HN", "HK", "HU", "IS", "IN",
-        "ID", "IQ", "IE", "IM", "IT", "JM", "JP", "JE", "JO", "KZ", "KI", "KW",
-        "KG", "LV", "LB", "LI", "LT", "LU", "MO", "MY", "MV", "MT", "MH", "MQ",
-        "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "NR", "NP", "NL", "NC",
-        "NI", "NU", "NF", "MK", "MP", "NO", "OM", "PW", "PA", "PG", "PY", "PE",
-        "PH", "PN", "PL", "PT", "QA", "SM", "SA", "RS", "SG", "SK", "SI", "SB",
-        "ZA", "GS", "KR", "ES", "LK", "BL", "SH", "KN", "LC", "MF", "PM", "VC",
-        "SJ", "SE", "CH", "TW", "TJ", "TH", "TO", "TT", "TR", "TC", "UM", "VI",
-        "UA", "AE", "GB", "US", "UY", "UZ", "VA", "VE", "VN", "WF", "EH"
-      ],
-    });
+    var input1 = document.querySelector("#international_PhoneNumber_countrycode");
+  var input2 = document.querySelector("#international_PhoneNumber1_countrycode");
+
+  var iti1 = window.intlTelInput(input1, {
+    separateDialCode: false,
+    preferredCountries: ["US"],
+    allowDropdown: true,
+    hiddenInput: "full",
+    utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js",
+    onlyCountries: [
+      "AX", "AS", "AD", "AI", "AR", "AM", "AW", "AT", "BS", "BH", "BD", "BB",
+      "BE", "BZ", "BM", "BO", "BA", "BR", "IO", "VG", "BG", "KH", "CA", "KY",
+      "CL", "CN", "CX", "CC", "CO", "CK", "CR", "HR", "CY", "CZ", "DK", "DM",
+      "DO", "EC", "SV", "EE", "FK", "FO", "FJ", "FI", "GE", "DE", "GI", "GR",
+      "GL", "GD", "GP", "GU", "GT", "GG", "HM", "HN", "HK", "HU", "IS", "IN",
+      "ID", "IQ", "IE", "IM", "IT", "JM", "JP", "JE", "JO", "KZ", "KI", "KW",
+      "KG", "LV", "LB", "LI", "LT", "LU", "MO", "MY", "MV", "MT", "MH", "MQ",
+      "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "NR", "NP", "NL", "NC",
+      "NI", "NU", "NF", "MK", "MP", "NO", "OM", "PW", "PA", "PG", "PY", "PE",
+      "PH", "PN", "PL", "PT", "QA", "SM", "SA", "RS", "SG", "SK", "SI", "SB",
+      "ZA", "GS", "KR", "ES", "LK", "BL", "SH", "KN", "LC", "MF", "PM", "VC",
+      "SJ", "SE", "CH", "TW", "TJ", "TH", "TO", "TT", "TR", "TC", "UM", "VI",
+      "UA", "AE", "GB", "US", "UY", "UZ", "VA", "VE", "VN", "WF", "EH"
+    ],
+  });
+
+  var iti2 = window.intlTelInput(input2, {
+    separateDialCode: false,
+    preferredCountries: ["US"],
+    allowDropdown: true,
+    hiddenInput: "full",
+    utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js",
+    onlyCountries: [
+      "AX", "AS", "AD", "AI", "AR", "AM", "AW", "AT", "BS", "BH", "BD", "BB",
+      "BE", "BZ", "BM", "BO", "BA", "BR", "IO", "VG", "BG", "KH", "CA", "KY",
+      "CL", "CN", "CX", "CC", "CO", "CK", "CR", "HR", "CY", "CZ", "DK", "DM",
+      "DO", "EC", "SV", "EE", "FK", "FO", "FJ", "FI", "GE", "DE", "GI", "GR",
+      "GL", "GD", "GP", "GU", "GT", "GG", "HM", "HN", "HK", "HU", "IS", "IN",
+      "ID", "IQ", "IE", "IM", "IT", "JM", "JP", "JE", "JO", "KZ", "KI", "KW",
+      "KG", "LV", "LB", "LI", "LT", "LU", "MO", "MY", "MV", "MT", "MH", "MQ",
+      "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "NR", "NP", "NL", "NC",
+      "NI", "NU", "NF", "MK", "MP", "NO", "OM", "PW", "PA", "PG", "PY", "PE",
+      "PH", "PN", "PL", "PT", "QA", "SM", "SA", "RS", "SG", "SK", "SI", "SB",
+      "ZA", "GS", "KR", "ES", "LK", "BL", "SH", "KN", "LC", "MF", "PM", "VC",
+      "SJ", "SE", "CH", "TW", "TJ", "TH", "TO", "TT", "TR", "TC", "UM", "VI",
+      "UA", "AE", "GB", "US", "UY", "UZ", "VA", "VE", "VN", "WF", "EH"
+    ],
+  });
+
+  // Function to set the initial country code in the input field
+  function setInitialPhoneNumber(input, itiInstance) {
+    var countryData = itiInstance.getSelectedCountryData();
+    input.value = `+${countryData.dialCode} `;
+  }
+
+  // Set the country code for both fields on load
+  setTimeout(function () {
+    setInitialPhoneNumber(input1, iti1);
+    setInitialPhoneNumber(input2, iti2);
+  }, 100);
+
+  // Update the input value when the country is changed
+  input1.addEventListener("countrychange", function () {
+    setInitialPhoneNumber(input1, iti1);
+  });
+
+  input2.addEventListener("countrychange", function () {
+    setInitialPhoneNumber(input2, iti2);
+  });
 
     document.querySelector("#international_PhoneNumber_countrycode").addEventListener("countrychange", function () {
       var countySel = document.querySelector(".dropdown-countries");
-      var countryData = iti.getSelectedCountryData();
+      var countryData = iti1.getSelectedCountryData();
       var countryName = countryData.name;
       var iso2 = countryData.iso2.toUpperCase();
       var iso3 = convert_ISO_3166_2_to_1[iso2] || "N/A";
@@ -1392,7 +1393,6 @@
       var event = new Event('change');
       countySel.dispatchEvent(event);
     });
-    
     document.addEventListener("keydown", function (event) {
       if (event.key === "Enter") {
         event.preventDefault(); // Prevent form from being submitted through enter key
@@ -1401,34 +1401,10 @@
     });
   </script>
   <script>
-    var input = document.querySelector(
-      "#international_PhoneNumber_countrycode"
-    );
-    function setInitialPhoneNumber() {
-      var countryData = iti.getSelectedCountryData();
-      input.value = `+${countryData.dialCode} `;
-    }
-    setTimeout(setInitialPhoneNumber, 100);
-    input.addEventListener("countrychange", function () {
-      setInitialPhoneNumber();
-    });
-   </script>  
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const input = document.getElementById("searchInput");
-      document.addEventListener("click", function (event) {
-        const loqateDropdown = document.querySelector(".dropdown-list");
-        if (!input.contains(event.target) && loqateDropdown && !loqateDropdown.contains(event.target)) {
-          loqateDropdown.style.display = "none";
-        }
-      });
-      input.addEventListener("input", function () {
-        const loqateDropdown = document.querySelector(".dropdown-list");
-        if (loqateDropdown) {
-          loqateDropdown.style.display = "block"; 
-        }
-      });
-    });
+  function setInitialPhoneNumber(input, itiInstance) {
+    var countryData = itiInstance.getSelectedCountryData();
+    input.value = `+${countryData.dialCode} `;
+  }
   </script>
   <script>
     function setupFileUpload(inputId, previewId, textId, removeId, dropzoneId, errorId) {

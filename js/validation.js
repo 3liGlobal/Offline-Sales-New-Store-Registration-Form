@@ -44,8 +44,8 @@ $(document).ready(function () {
       const isPhoneFormatted = phoneFormat();
       if (
         !isMandatoryFilled ||
-        !isPhoneValid ||
         !isEmailexist ||
+        !isPhoneValid ||
         !isPhoneFormatted ||
         !isEmailValid
       ) {

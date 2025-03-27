@@ -39,11 +39,13 @@ $(document).ready(function () {
     if (current === 1) {
       const isMandatoryFilled = zf_CheckMandatory();
       const isPhoneValid = await phoneNumberValidation();
+      const isEmailexist = await validate_Email()
       const isPhoneFormatted = phoneFormat();
       const isEmailValid = validateEmail($("#Email").val());
       if (
         !isMandatoryFilled ||
         !isPhoneValid ||
+        !isEmailexist ||
         !isPhoneFormatted ||
         !isEmailValid
       ) {
@@ -619,7 +621,41 @@ async function phoneNumberValidation() {
 
   return isValidPhoneNumber && isValidMobileNumber;
 }
+function validate_Email() {
+  return new Promise(async function (myResolve, myReject) {
+    let email = $("#Email").val();
+    if (email) {
+      const apiUrl =
+        "https://middlewares.azurewebsites.net/api/EmailCheckerZoho?environment=Production&email=" +
+        email;
 
+      // Make the API call using fetch
+      await fetch(apiUrl)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          if (data.flag) {
+            document.getElementById("Email_error").innerText =
+              "Email Already Exist";
+            document.getElementById("Email_error").style.display = "block";
+            myResolve(false);
+          } else {
+            myResolve(true);
+          }
+        })
+        .catch((error) => {
+          // Handle any errors that occur during the fetch
+          console.error("There was a problem with the fetch operation:", error);
+        });
+    } else {
+      myResolve(false);
+    }
+  });
+}
 function validatePhoneNumber(number, errorId, errorMessage) {
   const isValid = number.length > 5; // Allow strings, do not parseInt()
   const errorElement = document.getElementById(errorId);

@@ -430,7 +430,7 @@
               <!---------Decision Starts Here---------->
               <li class="zf-tempFrmWrapper zf-decesion">
                 <div class="zf-tempContDiv">
-                  <input type="checkbox" checktype="c1" checked="true" id="DecisionBox3" name="DecisionBox3" />
+                  <input type="checkbox" checktype="c1" checked="true" id="DecisionBox3" name="DecisionBox3" class="same" />
                   <label for="DecisionBox3" class="zf-labelName">Same as shipping
                   </label>
                   <p id="DecisionBox3_error" class="zf-errorMessage" style="display: none">
@@ -1362,19 +1362,17 @@
     ],
   });
 
-  // Function to set the initial country code in the input field
   function setInitialPhoneNumber(input, itiInstance) {
     var countryData = itiInstance.getSelectedCountryData();
     input.value = `+${countryData.dialCode} `;
   }
 
-  // Set the country code for both fields on load
   setTimeout(function () {
     setInitialPhoneNumber(input1, iti1);
     setInitialPhoneNumber(input2, iti2);
   }, 100);
 
-  // Update the input value when the country is changed
+
   input1.addEventListener("countrychange", function () {
     setInitialPhoneNumber(input1, iti1);
   });
@@ -1395,7 +1393,7 @@
     });
     document.addEventListener("keydown", function (event) {
       if (event.key === "Enter") {
-        event.preventDefault(); // Prevent form from being submitted through enter key
+        event.preventDefault(); 
         zf_ValidateAndSubmit();
       }
     });
@@ -1406,6 +1404,7 @@
     input.value = `+${countryData.dialCode} `;
   }
   </script>
+  <!-- file upload -->
   <script>
     function setupFileUpload(inputId, previewId, textId, removeId, dropzoneId, errorId) {
       let fileInput = document.getElementById(inputId);
@@ -1418,22 +1417,22 @@
       fileInput.addEventListener("change", function () {
         if (this.files.length > 0) {
           fileText.textContent = this.files[0].name;
-          filePreview.style.display = "flex";  // Show file preview
-          dropzone.style.display = "none";  // Hide dropzone
-          errorMessage.style.display = "none";  // Hide error message
+          filePreview.style.display = "flex";  
+          dropzone.style.display = "none";  
+          errorMessage.style.display = "none";  
         }
       });
   
       removeFile.addEventListener("click", function () {
-        fileInput.value = "";  // Clear file input
+        fileInput.value = "";  
         fileText.textContent = "";
-        filePreview.style.display = "none";  // Hide file preview
-        dropzone.style.display = "block";  // Show dropzone again
-        errorMessage.style.display = "block";  // Show error message again
+        filePreview.style.display = "none";  
+        dropzone.style.display = "block";  
+        errorMessage.style.display = "block";  
       });
     }
   
-    // Initialize file upload functionality for both fields
+   
     setupFileUpload("fileInput1", "filePreview1", "fileText1", "removeFile1", "dropzoneContainer1", "FileUpload2_error");
     setupFileUpload("fileInput2", "filePreview2", "fileText2", "removeFile2", "dropzoneContainer2", "FileUpload3_error");
   </script>
@@ -1472,6 +1471,59 @@
         });
       });
     </script>
+     <!-- Dynamic Height for Ifram -->
+<script>
+  function updateHeight() {
+      requestAnimationFrame(() => {
+          let formContainer = document.querySelector("#form");
+          if (formContainer) {
+              formContainer.style.display = "block"; 
+              void formContainer.offsetHeight; 
+
+              let newHeight = formContainer.scrollHeight + 20;
+              window.parent.postMessage(newHeight, '*');
+              setTimeout(() => {
+                  document.body.style.overflow = "";
+              }, 300);
+          }
+      });
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(updateHeight, 100);
+  });
+  document.addEventListener("click", function(event) {
+      if (event.target.matches(".next, .previous, .same")) {
+          setTimeout(updateHeight, 50);
+      }
+  });
+  window.addEventListener("resize", updateHeight);
+  const observer = new MutationObserver(() => {
+      updateHeight();
+  });
+
+  observer.observe(document.querySelector("#form"), { childList: true, subtree: true });
+</script>
+
+  <!-- send event for Magento -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var submitButton = document.getElementById("submitBtn");
+      var checkbox = document.getElementById("DecisionBox1");
+  
+      submitButton.addEventListener("click", function () {
+        console.log("Submit button clicked!");
+  
+        // Store checkbox state in sessionStorage
+        if (checkbox.checked) {
+          sessionStorage.setItem("checkboxChecked", "true");
+        } else {
+          sessionStorage.setItem("checkboxChecked", "false");
+        }
+  
+        console.log("Stored checkbox value:", sessionStorage.getItem("checkboxChecked"));
+      });
+    });
+  </script>
 </body>
 
 </html>

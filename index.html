@@ -1556,10 +1556,6 @@
     const agentId = params.get("agentId");
     const source = params.get("source");
 
-    console.log("Agent ID:", agentId);
-    console.log("Source:", source);
-
-    // Set values if available
     if (source) {
       const sourceField = document.querySelector('input[name="SingleLine3"]');
       if (sourceField) sourceField.value = source;

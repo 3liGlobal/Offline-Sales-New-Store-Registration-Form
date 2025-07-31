@@ -39,15 +39,14 @@ $(document).ready(function () {
     if (current === 1) {
       const isMandatoryFilled = zf_CheckMandatory();
       const isPhoneValid = await phoneNumberValidation();
-      const isEmailValid = validateEmail($("#Email").val());
-      const isEmailexist = await validate_Email()
+      // const isEmailValid = validateEmail($("#Email").val());
+      // const isEmailexist = await validate_Email()
       const isPhoneFormatted = phoneFormat();
       if (
         !isMandatoryFilled ||
-        !isEmailexist ||
+        // !isEmailexist ||
         !isPhoneValid ||
-        !isPhoneFormatted ||
-        !isEmailValid
+        !isPhoneFormatted 
       ) {
         return false;
       }

@@ -259,6 +259,27 @@
                   </li>
                   <!---------Dropdown Ends Here---------->
                 </div>
+
+                <div class="col2">
+                  <!---------Channel Dropdown Starts Here---------->
+                  <li class="zf-tempFrmWrapper zf-small">
+                    <div class="zf-tempFrmWrapper  zf-large "><label class="zf-labelName">
+                        Channel
+                      </label>
+                      <div class="zf-tempContDiv">
+                        <select class="zf-form-sBox" name="Dropdown9" checktype="c1">
+                          <option selected="true" value="-Select-">-Select-</option>
+                          <option value="WS">WS</option>
+                          <option value="RTL">RTL</option>
+                          <option value="HoReCa">HoReCa</option>
+                        </select>
+                        <p id="Dropdown9_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                      </div>
+                      <div class="zf-clearBoth"></div>
+                    </div>
+                  </li>
+                  <!---------Channel Dropdown Ends Here---------->
+                </div>
               </div>
               <div class="main-f">
                 <div class="col1" style="display: none;">
@@ -1076,6 +1097,7 @@
       "DecisionBox3",
       "Dropdown7",
       "Dropdown8",
+      "Dropdown9",
       "Address1_AddressLine1",
       "Address1_AddressLine2",
       "Address1_City",
@@ -1549,23 +1571,23 @@
   </script>
 
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const params = new URLSearchParams(window.location.search);
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
 
-    const agentId = params.get("agentId");
-    const source = params.get("source");
+      const agentId = params.get("agentId");
+      const source = params.get("source");
 
-    if (source) {
-      const sourceField = document.querySelector('input[name="SingleLine3"]');
-      if (sourceField) sourceField.value = source;
-    }
+      if (source) {
+        const sourceField = document.querySelector('input[name="SingleLine3"]');
+        if (sourceField) sourceField.value = source;
+      }
 
-    if (agentId) {
-      const agentIdField = document.querySelector('input[name="SingleLine9"]');
-      if (agentIdField) agentIdField.value = agentId;
-    }
-  });
-</script>
+      if (agentId) {
+        const agentIdField = document.querySelector('input[name="SingleLine9"]');
+        if (agentIdField) agentIdField.value = agentId;
+      }
+    });
+  </script>
 
 
 </body>

@@ -121,14 +121,31 @@ $(document).ready(function () {
   });
 
   $("#submitBtn").click(function (e) {
-    e.preventDefault(); // Stop default submission first
+    e.preventDefault();
+    var $btn = $(this);
+    // If already disabled, ignore additional clicks
+    if ($btn.prop('disabled')) {
+      return false;
+    }
     console.log("Submit button clicked");
+    // Disable button immediately to prevent duplicate submissions and provide feedback
++    $btn.prop('disabled', true).attr('aria-disabled', 'true');
+    var originalText = $btn.text();
+    try {
+      $btn.text('Submitting...');
+    } catch (err) {
+       console.log("submission failed.");
+    }
 
     if (zf_ValidateAndSubmit()) {
       console.log("Form validation passed, submitting...");
-      $("#form").unbind("submit").submit(); // Ensure form submits
+      $("#form").unbind("submit").submit();
     } else {
       console.log("Form validation failed.");
+      $btn.prop('disabled', false).attr('aria-disabled', 'false');
+      try {
+        $btn.text(originalText);
+      } catch (err) {}
     }
   });
 

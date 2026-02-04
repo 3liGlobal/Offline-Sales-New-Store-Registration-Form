@@ -1,502 +1,555 @@
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hookah&#x20;Registration&#x20;Registration&#x20;Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link href="css/form.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/google-libphonenumber/3.2.13/libphonenumber.min.js"></script>
+    <script src="js/validation.js"></script>
+    <style>
+      .state-dropdown,
+      .state-dropdown-v2,
+      .state-text,
+      .state-text-v2 {
+        display: none;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hookah&#x20;Registration&#x20;Registration&#x20;Form</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link href="css/form.css" rel="stylesheet" type="text/css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/google-libphonenumber/3.2.13/libphonenumber.min.js"></script>
-  <script src="js/validation.js"></script>
-  <style>
-    .state-dropdown,
-    .state-dropdown-v2,
-    .state-text,
-    .state-text-v2 {
-      display: none;
-    }
-  </style>
-</head>
+  <body class="zf-backgroundBg">
+    <!-- Change or deletion of the name attributes in the input tag will lead to empty values on record submission-->
+    <div class="zf-templateWidth">
+      <form
+        action="https://forms.zohopublic.com/airglobal/form/OfflineSales1/formperma/G82fh0Wip0qT5icphiEsg5oXkSK6WeisMJLADk9rso0/htmlRecords/submit"
+        name="form"
+        method="POST"
+        onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
+        accept-charset="UTF-8"
+        enctype="multipart/form-data"
+        id="form"
+      >
+        <input
+          type="hidden"
+          name="zf_referrer_name"
+          value=""
+        /><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+        <input
+          type="hidden"
+          name="zf_redirect_url"
+          value=""
+        /><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+        <input
+          type="hidden"
+          name="zc_gad"
+          value=""
+        /><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+        <div class="zf-templateWrapper">
+          <!---------template Header Starts Here---------->
+          <ul id="progressbar">
+            <li class="active" id="number1" data-step="1">
+              <strong style="text-transform: uppercase">General Info</strong>
+            </li>
+            <li id="number2" data-step="2">
+              <strong style="text-transform: uppercase">Addresses</strong>
+            </li>
+            <li id="number3" data-step="3">
+              <strong style="text-transform: uppercase">LICENSES</strong>
+            </li>
+          </ul>
 
-<body class="zf-backgroundBg">
-  <!-- Change or deletion of the name attributes in the input tag will lead to empty values on record submission-->
-  <div class="zf-templateWidth">
-    <form
-      action="https://forms.zohopublic.com/airglobal/form/OfflineSales1/formperma/G82fh0Wip0qT5icphiEsg5oXkSK6WeisMJLADk9rso0/htmlRecords/submit"
-      name="form" method="POST" onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
-      accept-charset="UTF-8" enctype="multipart/form-data" id="form">
-      <input type="hidden" name="zf_referrer_name"
-        value="" /><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
-      <input type="hidden" name="zf_redirect_url"
-        value="" /><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
-      <input type="hidden" name="zc_gad"
-        value="" /><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
-      <div class="zf-templateWrapper">
-        <!---------template Header Starts Here---------->
-        <ul id="progressbar">
-          <li class="active" id="number1" data-step="1">
-            <strong style="text-transform: uppercase">General Info</strong>
-          </li>
-          <li id="number2" data-step="2">
-            <strong style="text-transform: uppercase">Addresses</strong>
-          </li>
-          <li id="number3" data-step="3">
-            <strong style="text-transform: uppercase">LICENSES</strong>
-          </li>
-        </ul>
-
-        <div class="progress">
-          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-        <br />
-        <!---------template Header Ends Here---------->
-        <!---------template Container Starts Here---------->
-        <div class="zf-subContWrap zf-topAlign">
-          <div class="zf-tempFrmWrapper zf-small" style="display: none;">
-            <label class="zf-labelName">Lead Source</label>
-            <div class="zf-tempContDiv">
-              <span>
-                <input type="text" name="SingleLine3" checktype="c1" value="Web Form" maxlength="255" fieldType="1"
-                  placeholder="" />
-              </span>
-              <p id="SingleLine3_error" class="zf-errorMessage" style="display: none;">Invalid value</p>
-            </div>
-            <div class="zf-clearBoth"></div>
+          <div class="progress">
+            <div
+              class="progress-bar progress-bar-striped progress-bar-animated"
+              role="progressbar"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
           </div>
-
-          <div class="zf-tempFrmWrapper  zf-small " style="display: none;"><label class="zf-labelName">
-              Agent Id
-            </label>
-            <div class="zf-tempContDiv">
-              <span>
-                <input type="text" name="SingleLine9" checktype="c1" value="" maxlength="255" fieldType=1
-                  placeholder="" /> </span>
-              <p id="SingleLine9_error" class="zf-errorMessage" style="display: none;">Invalid value
-              </p>
+          <br />
+          <!---------template Header Ends Here---------->
+          <!---------template Container Starts Here---------->
+          <div class="zf-subContWrap zf-topAlign">
+            <div class="zf-tempFrmWrapper zf-small" style="display: none">
+              <label class="zf-labelName">Lead Source</label>
+              <div class="zf-tempContDiv">
+                <span>
+                  <input
+                    type="text"
+                    name="SingleLine3"
+                    checktype="c1"
+                    value="Web Form"
+                    maxlength="255"
+                    fieldType="1"
+                    placeholder=""
+                  />
+                </span>
+                <p
+                  id="SingleLine3_error"
+                  class="zf-errorMessage"
+                  style="display: none"
+                >
+                  Invalid value
+                </p>
+              </div>
+              <div class="zf-clearBoth"></div>
             </div>
-            <div class="zf-clearBoth"></div>
-          </div>
 
-          <ul>
-            <fieldset>
-              <!---------Section Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-section">
-                <h2>Contact Information</h2>
-                <p></p>
-              </li>
-              <!---------Section Ends Here---------->
-              <!---------Name Starts Here---------->
-              <li class="zf-tempFrmWrapper">
-                <div class="zf-tempContDiv zf-twoType">
-                  <div class="zf-nameWrapper">
-                    <div class="main-f">
-                      <div class="col1">
-                        <label class="zf-labelName">First Name
-                          <em class="zf-important">*</em>
-                        </label>
-                        <input type="text" maxlength="255" name="Name_First" fieldType="7" placeholder=""
-                          oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" />
-                      </div>
-
-                      <div class="col2">
-                        <label class="zf-labelName">Last Name
-                          <em class="zf-important">*</em>
-                        </label>
-                        <input type="text" maxlength="255" name="Name_Last" fieldType="7" placeholder=""
-                          oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" />
-                      </div>
-                    </div>
-
-                    <div class="zf-clearBoth"></div>
-                  </div>
-                  <p id="Name_error" class="zf-errorMessage" style="display: none">
-                    Please enter your name
-                  </p>
-                </div>
-                <div class="zf-clearBoth"></div>
-              </li>
-              <!---------Name Ends Here---------->
-              <!---------Email Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-large">
-                <label class="zf-labelName">
-                  Email
-                  <!-- <em class="zf-important">*</em> -->
-                </label>
-                <div class="zf-tempContDiv">
-                  <span>
-                    <input fieldType="9" type="text" maxlength="255" name="Email" checktype="c5" value="" placeholder=""
-                      id="Email" /></span>
-                  <p id="Email_error" class="zf-errorMessage" style="display:none;">Please complete
-                    this required field.
-                  </p>
-                </div>
-                <div class="zf-clearBoth"></div>
-              </li>
-              <!---------Email Ends Here---------->
-              <div class="main-f">
-                <div class="col1">
-                  <!---------Phone Starts Here---------->
-                  <li class="zf-tempFrmWrapper zf-large">
-                    <label class="zf-labelName">
-                      Mobile Phone
-                      <em class="zf-important">*</em>
-                    </label>
-                    <div class="zf-tempContDiv zf-phonefld">
-                      <div class="zf-phwrapper zf-phNumber">
-                        <span>
-                          <input type="text" compname="PhoneNumber1" name="PhoneNumber1_countrycode" maxlength="20"
-                            checktype="c7" value="" phoneFormat="1" isCountryCodeEnabled="false" fieldType="11"
-                            id="international_PhoneNumber_countrycode" valType="number" phoneFormatType="1"
-                            placeholder="" oninput="this.value = this.value.replace(/[^0-9+]/g, '')" />
-                        </span>
-                        <div class="zf-clearBoth"></div>
-                      </div>
-                      <p id="PhoneNumber1_error" class="zf-errorMessage" style="display: none">
-                        Invalid value
-                      </p>
-                    </div>
-                    <div class="zf-clearBoth"></div>
-                  </li>
-                  <!---------Phone Ends Here---------->
-                </div>
-                <div class="col2">
-                  <!---------Phone Starts Here---------->
-                  <li class="zf-tempFrmWrapper zf-large">
-                    <label class="zf-labelName">
-                      Business Phone
-                      <em class="zf-important">*</em>
-                    </label>
-                    <div class="zf-tempContDiv zf-phonefld">
-                      <div class="zf-phwrapper zf-phNumber">
-                        <span>
-                          <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" maxlength="20"
-                            checktype="c7" value="" phoneFormat="1" isCountryCodeEnabled="false" fieldType="11"
-                            id="international_PhoneNumber1_countrycode" valType="number" phoneFormatType="1"
-                            placeholder="" oninput="this.value = this.value.replace(/[^0-9+]/g, '')" />
-                        </span>
-                        <div class="zf-clearBoth"></div>
-                      </div>
-                      <p id="PhoneNumber_error" class="zf-errorMessage" style="display: none">
-                        Invalid value
-                      </p>
-                    </div>
-                    <div class="zf-clearBoth"></div>
-                  </li>
-                  <!---------Phone Ends Here---------->
-                </div>
+            <div class="zf-tempFrmWrapper zf-small" style="display: none">
+              <label class="zf-labelName"> Agent Id </label>
+              <div class="zf-tempContDiv">
+                <span>
+                  <input
+                    type="text"
+                    name="SingleLine9"
+                    checktype="c1"
+                    value=""
+                    maxlength="255"
+                    fieldType="1"
+                    placeholder=""
+                  />
+                </span>
+                <p
+                  id="SingleLine9_error"
+                  class="zf-errorMessage"
+                  style="display: none"
+                >
+                  Invalid value
+                </p>
               </div>
-              <!---------Section Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-section">
-                <h2>Business Information</h2>
-                <p></p>
-              </li>
-              <!---------Section Ends Here---------->
-              <div class="main-f">
-                <div class="col1">
-                  <!---------Single Line Starts Here---------->
-                  <li class="zf-tempFrmWrapper zf-large">
-                    <label class="zf-labelName">
-                      Company Name
-                      <em class="zf-important">*</em>
-                    </label>
-                    <div class="zf-tempContDiv">
-                      <span>
-                        <input type="text" name="SingleLine" checktype="c1" value="" maxlength="255" fieldType="1"
-                          placeholder="" /></span>
-                      <p id="SingleLine_error" class="zf-errorMessage" style="display: none">
-                        Invalid value
-                      </p>
-                    </div>
-                    <div class="zf-clearBoth"></div>
-                  </li>
-                  <!---------Single Line Ends Here---------->
-                </div>
-                <div class="col2">
-                  <!---------Dropdown Starts Here---------->
-                  <li class="zf-tempFrmWrapper zf-small">
-                    <label class="zf-labelName">
-                      Business Type
-                      <em class="zf-important">*</em>
-                    </label>
-                    <div class="zf-tempContDiv">
-                      <select class="zf-form-sBox" name="Dropdown" checktype="c1">
-                        <option selected="true" value="-Select-">
-                          Select an option
-                        </option>
-                        <option value="Bar/Nightclub">
-                          Bar/Nightclub
-                        </option>
-                        <option value="Catering">
-                          Catering
-                        </option>
-                        <option value="Distributor">
-                          Distributor
-                        </option>
-                        <option value="Duty&#x20;Free&#x20;/&#x20;Export">
-                          Duty Free / Export
-                        </option>
-                        <option value="Hookah&#x20;Lounge">Hookah Lounge</option>
-                        <option value="Lounge">Lounge</option>
-                        <option value="Retail&#x20;Store">Retail Store</option>
-                        <option value="Wholesaler">Wholesaler</option>
-                      </select>
-                      <p id="Dropdown_error" class="zf-errorMessage" style="display: none">
-                        Invalid value
-                      </p>
-                    </div>
-                    <div class="zf-clearBoth"></div>
-                  </li>
-                  <!---------Dropdown Ends Here---------->
-                </div>
+              <div class="zf-clearBoth"></div>
+            </div>
 
-                <div class="col2">
-                  <!---------Channel Dropdown Starts Here---------->
-                  <li class="zf-tempFrmWrapper zf-small">
-                    <div class="zf-tempFrmWrapper  zf-large "><label class="zf-labelName">
-                        Channel
-                      </label>
-                      <div class="zf-tempContDiv">
-                        <select class="zf-form-sBox" name="Dropdown9" checktype="c1">
-                          <option selected="true" value="-Select-">-Select-</option>
-                          <option value="WS">WS</option>
-                          <option value="RTL">RTL</option>
-                          <option value="HoReCa">HoReCa</option>
-                        </select>
-                        <p id="Dropdown9_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
-                      </div>
-                      <div class="zf-clearBoth"></div>
-                    </div>
-                  </li>
-                  <!---------Channel Dropdown Ends Here---------->
-                </div>
-              </div>
-              <div class="main-f">
-                <div class="col1" style="display: none;">
-                  <li class="zf-tempFrmWrapper zf-large"><label class="zf-labelName">
-                      Main Phone Number
-                    </label>
-                    <div class="zf-tempContDiv">
-                      <select class="zf-form-sBox" name="Dropdown6" checktype="c1">
-                        <option selected="true" value="-Select-">-Select-</option>
-                        <option value="Mobile&#x20;Phone">Mobile Phone</option>
-                        <option value="Work&#x20;Phone" selected>Work Phone</option>
-                      </select>
-                      <p id="Dropdown6_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
-                    </div>
-                    <div class="zf-clearBoth"></div>
-                  </li><!---------Dropdown Ends Here---------->
-                </div>
-              </div>
-              <!---------Decision Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-decesion">
-                <div class="zf-tempContDiv">
-                  <input type="checkbox" checktype="c1" id="DecisionBox1" name="DecisionBox1" />
-                  <label for="DecisionBox1" class="zf-labelName">Yes, keep me up to date on news and exclusive offers on
-                    products including tobacco.
-                  </label>
-                  <p id="DecisionBox1_error" class="zf-errorMessage" style="display: none">
-                    Invalid value
-                  </p>
-                </div>
-                <div class="zf-clearBoth"></div>
-              </li>
-              <!---------Decision Ends Here---------->
-              <input type="button" name="next" class="next action-button" value="Next"
-                onclick="zf_ValidateAndSubmit()" />
+            <ul>
+              <fieldset>
+                <!---------Section Starts Here---------->
+                <li class="zf-tempFrmWrapper zf-section">
+                  <h2>Contact Information</h2>
+                  <p></p>
+                </li>
+                <!---------Section Ends Here---------->
+                <!---------Name Starts Here---------->
+                <li class="zf-tempFrmWrapper">
+                  <div class="zf-tempContDiv zf-twoType">
+                    <div class="zf-nameWrapper">
+                      <div class="main-f">
+                        <div class="col1">
+                          <label class="zf-labelName"
+                            >First Name
+                            <em class="zf-important">*</em>
+                          </label>
+                          <input
+                            type="text"
+                            maxlength="255"
+                            name="Name_First"
+                            fieldType="7"
+                            placeholder=""
+                            oninput="
+                              this.value = this.value.replace(
+                                /[^a-zA-Z\s]/g,
+                                '',
+                              )
+                            "
+                          />
+                        </div>
 
-              <!---------Description Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-note">
-                <label class="zf-descFld">
-                  <div>
-                    All Hookah for Business accounts are subject to approval.
-                    By submitting this application, I acknowledge that I have
-                    read and agree to the <a href="https://business.hookah.com/content/terms-and-conditions"
-                      target="_blank">Terms and Conditions</a> and <a
-                      href="https://business.hookah.com/content/privacy-policy-business" target="_blank">Privacy
-                      Policy</a> <br /></div>
-                </label>
-                <div class="zf-clearBoth"></div>
-              </li>
-              <!---------Description Ends Here---------->
-            </fieldset>
-            <fieldset>
-              <!---------Section Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-section">
-                <h2>Shipping Address</h2>
-                <p></p>
-              </li>
-              <!---------Section Ends Here---------->
-              <div class="main-f">
-                <div class="col1">
-                  <!---------Dropdown Starts Here---------->
-                  <li class="zf-tempFrmWrapper zf-small">
-                    <label class="zf-labelName">
-                      Address Type
-                      <em class="zf-important">*</em>
-                    </label>
-                    <div class="zf-tempContDiv">
-                      <select class="zf-form-sBox" name="Dropdown2" checktype="c1">
-                        <option selected="true" value="-Select-">
-                          Select an option
-                        </option>
-                        <option value="Residential">Residential</option>
-                        <option value="Business&#x20;Location">
-                          Business Location
-                        </option>
-                        <option value="Alternative&#x20;Business&#x20;Location">
-                          Alternative Business Location
-                        </option>
-                        <option value="Freight&#x20;Forwarder">
-                          Freight Forwarder
-                        </option>
-                        <option value="Freight&#x20;Pickup&#x20;Center">
-                          Freight Pickup Center
-                        </option>
-                      </select>
-                      <p id="Dropdown2_error" class="zf-errorMessage" style="display: none">
-                        Invalid value
-                      </p>
-                    </div>
-                    <div class="zf-clearBoth"></div>
-                  </li>
-                  <!---------Dropdown Ends Here---------->
-                </div>
-                <div class="col2"></div>
-              </div>
-              <div class="main-f">
-                <div class="col1">
-                  <!---------Dropdown Starts Here---------->
-                  <li class="zf-tempFrmWrapper zf-small">
-                    <label class="zf-labelName">
-                      Country
-                      <em class="zf-important">*</em>
-                    </label>
-                    <div class="zf-tempContDiv">
-                      <select class="zf-form-sBox dropdown-countries" name="Dropdown5" checktype="c1" id="countryF1">
-                        <option value="" id="country" selected="selected" disabled>Select Country
-                        </option>
-                        <option value="CAN">Canada</option>
-                        <option value="MEX">Mexico</option>
-                        <option value="USA">United States of America</option>
-                      </select>
-                      <p id="Dropdown5_error" class="zf-errorMessage" style="display: none">
-                        Invalid value
-                      </p>
-                    </div>
-                    <div class="zf-clearBoth"></div>
-                  </li>
-                  <!---------Dropdown Ends Here---------->
-                </div>
-                <div class="col2"></div>
-              </div>
-              <!--address-->
-              <!---------Address Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-address zf-addrlarge">
-                <label class="zf-labelName"> </label>
-                <div class="zf-tempContDiv zf-address">
-                  <div class="zf-addrCont">
-                    <div class="main-f">
-                      <div class="col1">
-                        <label class="zf-labelName">Street Address
-                          <em class="zf-important">*</em>
-                        </label>
-                        <input type="text" maxlength="255" name="Address_AddressLine1" checktype="c1" placeholder=""
-                          oninput="searchDropdown()" id="searchInput" />
-                        <div class="dropdown-list"></div>
-                      </div>
-                      <div class="col2">
-                        <label class="zf-labelName">Suite, Unit, Apartment, Box
-                          <em class="zf-important"></em>
-                        </label>
-                        <input type="text" maxlength="255" name="Address_AddressLine2" checktype="c1" placeholder=""
-                          id="suite_unit_apt_box_v1" />
-                      </div>
-                    </div>
-                    <div class="main-f">
-                      <div class="col1">
-                        <label class="zf-labelName">City
-                          <em class="zf-important">*</em>
-                        </label>
-                        <input type="text" maxlength="255" name="Address_City" checktype="c1" placeholder=""
-                          id="cityV1" />
-                      </div>
-                      <div class="col2">
-                        <label class="zf-labelName">State &#x2f; Region &#x2f; Province
-                          <em class="zf-important star" id="state_star">*</em>
-                        </label>
-                        <select class="state-dropdown" checktype="c1" placeholder="">
-                          <option value="" selected="selected" name="Address_Region">Select State</option>
-                        </select>
-                        <input type="text" class="state-text" checktype="c1" name="Address_Region" placeholder=""
-                          autocomplete="off">
-                      </div>
-                    </div>
-                    <div class="main-f">
-                      <div class="col1">
-                        <label class="zf-labelName">Postal &#x2f; Zip Code
-                          <em class="zf-important">*</em>
-                        </label>
-                        <input type="text" maxlength="255" name="Address_ZipCode" checktype="c1" placeholder=""
-                          id="postalCode" />
-                      </div>
-                      <div class="col2">
-
-                        <div class="zf-tempContDiv" style="display: none;">
-                          <span> <input type="text" name="SingleLine5" checktype="c1" value="" maxlength="255"
-                              fieldType=1 placeholder="" id="stateLabel" /></span>
-                          <p id="SingleLine5_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                        <div class="col2">
+                          <label class="zf-labelName"
+                            >Last Name
+                            <em class="zf-important">*</em>
+                          </label>
+                          <input
+                            type="text"
+                            maxlength="255"
+                            name="Name_Last"
+                            fieldType="7"
+                            placeholder=""
+                            oninput="
+                              this.value = this.value.replace(
+                                /[^a-zA-Z\s]/g,
+                                '',
+                              )
+                            "
+                          />
                         </div>
                       </div>
+
+                      <div class="zf-clearBoth"></div>
                     </div>
-                    <!---------Single Line Starts Here---------->
-
-
+                    <p
+                      id="Name_error"
+                      class="zf-errorMessage"
+                      style="display: none"
+                    >
+                      Please enter your name
+                    </p>
                   </div>
-                </div>
-                <div class="zf-eclearBoth"></div>
-              </li>
-              <!---------Address Ends Here---------->
-              <!---------Section Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-section">
-                <h2>Billing Address&#x2f;Tax Location Address</h2>
-                <p></p>
-              </li>
-              <!---------Section Ends Here---------->
-              <!---------Decision Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-decesion">
-                <div class="zf-tempContDiv">
-                  <input type="checkbox" checktype="c1" checked="true" id="DecisionBox3" name="DecisionBox3"
-                    class="same" />
-                  <label for="DecisionBox3" class="zf-labelName">Same as shipping
+                  <div class="zf-clearBoth"></div>
+                </li>
+                <!---------Name Ends Here---------->
+                <!---------Email Starts Here---------->
+                <li class="zf-tempFrmWrapper zf-large">
+                  <label class="zf-labelName">
+                    Email
+                    <!-- <em class="zf-important">*</em> -->
                   </label>
-                  <p id="DecisionBox3_error" class="zf-errorMessage" style="display: none">
-                    Invalid value
-                  </p>
-                </div>
-                <div class="zf-clearBoth"></div>
-              </li>
-              <!---------Decision Ends Here---------->
-              <!---------Dropdown Starts Here---------->
-              <div id="addressType" style="display: none;">
+                  <div class="zf-tempContDiv">
+                    <span>
+                      <input
+                        fieldType="9"
+                        type="text"
+                        maxlength="255"
+                        name="Email"
+                        checktype="c5"
+                        value=""
+                        placeholder=""
+                        id="Email"
+                    /></span>
+                    <p
+                      id="Email_error"
+                      class="zf-errorMessage"
+                      style="display: none"
+                    >
+                      Please complete this required field.
+                    </p>
+                  </div>
+                  <div class="zf-clearBoth"></div>
+                </li>
+                <!---------Email Ends Here---------->
                 <div class="main-f">
                   <div class="col1">
+                    <!---------Phone Starts Here---------->
+                    <li class="zf-tempFrmWrapper zf-large">
+                      <label class="zf-labelName">
+                        Mobile Phone
+                        <em class="zf-important">*</em>
+                      </label>
+                      <div class="zf-tempContDiv zf-phonefld">
+                        <div class="zf-phwrapper zf-phNumber">
+                          <span>
+                            <input
+                              type="text"
+                              compname="PhoneNumber1"
+                              name="PhoneNumber1_countrycode"
+                              maxlength="20"
+                              checktype="c7"
+                              value=""
+                              phoneFormat="1"
+                              isCountryCodeEnabled="false"
+                              fieldType="11"
+                              id="international_PhoneNumber_countrycode"
+                              valType="number"
+                              phoneFormatType="1"
+                              placeholder=""
+                              oninput="
+                                this.value = this.value.replace(/[^0-9+]/g, '')
+                              "
+                            />
+                          </span>
+                          <div class="zf-clearBoth"></div>
+                        </div>
+                        <p
+                          id="PhoneNumber1_error"
+                          class="zf-errorMessage"
+                          style="display: none"
+                        >
+                          Invalid value
+                        </p>
+                      </div>
+                      <div class="zf-clearBoth"></div>
+                    </li>
+                    <!---------Phone Ends Here---------->
+                  </div>
+                  <div class="col2">
+                    <!---------Phone Starts Here---------->
+                    <li class="zf-tempFrmWrapper zf-large">
+                      <label class="zf-labelName">
+                        Business Phone
+                        <em class="zf-important">*</em>
+                      </label>
+                      <div class="zf-tempContDiv zf-phonefld">
+                        <div class="zf-phwrapper zf-phNumber">
+                          <span>
+                            <input
+                              type="text"
+                              compname="PhoneNumber"
+                              name="PhoneNumber_countrycode"
+                              maxlength="20"
+                              checktype="c7"
+                              value=""
+                              phoneFormat="1"
+                              isCountryCodeEnabled="false"
+                              fieldType="11"
+                              id="international_PhoneNumber1_countrycode"
+                              valType="number"
+                              phoneFormatType="1"
+                              placeholder=""
+                              oninput="
+                                this.value = this.value.replace(/[^0-9+]/g, '')
+                              "
+                            />
+                          </span>
+                          <div class="zf-clearBoth"></div>
+                        </div>
+                        <p
+                          id="PhoneNumber_error"
+                          class="zf-errorMessage"
+                          style="display: none"
+                        >
+                          Invalid value
+                        </p>
+                      </div>
+                      <div class="zf-clearBoth"></div>
+                    </li>
+                    <!---------Phone Ends Here---------->
+                  </div>
+                </div>
+                <!---------Section Starts Here---------->
+                <li class="zf-tempFrmWrapper zf-section">
+                  <h2>Business Information</h2>
+                  <p></p>
+                </li>
+                <!---------Section Ends Here---------->
+                <div class="main-f">
+                  <div class="col1">
+                    <!---------Single Line Starts Here---------->
+                    <li class="zf-tempFrmWrapper zf-large">
+                      <label class="zf-labelName">
+                        Company Name
+                        <em class="zf-important">*</em>
+                      </label>
+                      <div class="zf-tempContDiv">
+                        <span>
+                          <input
+                            type="text"
+                            name="SingleLine"
+                            checktype="c1"
+                            value=""
+                            maxlength="255"
+                            fieldType="1"
+                            placeholder=""
+                        /></span>
+                        <p
+                          id="SingleLine_error"
+                          class="zf-errorMessage"
+                          style="display: none"
+                        >
+                          Invalid value
+                        </p>
+                      </div>
+                      <div class="zf-clearBoth"></div>
+                    </li>
+                    <!---------Single Line Ends Here---------->
+                  </div>
+                  <div class="col2">
+                    <!---------Dropdown Starts Here---------->
+                    <li class="zf-tempFrmWrapper zf-small">
+                      <label class="zf-labelName">
+                        Business Type
+                        <em class="zf-important">*</em>
+                      </label>
+                      <div class="zf-tempContDiv">
+                        <select
+                          class="zf-form-sBox"
+                          name="Dropdown"
+                          checktype="c1"
+                        >
+                          <option selected="true" value="-Select-">
+                            Select an option
+                          </option>
+                          <option value="Bar/Nightclub">Bar/Nightclub</option>
+                          <option value="Catering">Catering</option>
+                          <option value="Distributor">Distributor</option>
+                          <option value="Duty&#x20;Free&#x20;/&#x20;Export">
+                            Duty Free / Export
+                          </option>
+                          <option value="Hookah&#x20;Lounge">
+                            Hookah Lounge
+                          </option>
+                          <option value="Lounge">Lounge</option>
+                          <option value="Retail&#x20;Store">
+                            Retail Store
+                          </option>
+                          <option value="Wholesaler">Wholesaler</option>
+                        </select>
+                        <p
+                          id="Dropdown_error"
+                          class="zf-errorMessage"
+                          style="display: none"
+                        >
+                          Invalid value
+                        </p>
+                      </div>
+                      <div class="zf-clearBoth"></div>
+                    </li>
+                    <!---------Dropdown Ends Here---------->
+                  </div>
+
+                  <div class="col2">
+                    <!---------Channel Dropdown Starts Here---------->
+                    <li class="zf-tempFrmWrapper zf-small">
+                      <div class="zf-tempFrmWrapper zf-large">
+                        <label class="zf-labelName">
+                          Channel
+                          <em class="zf-important">*</em>
+                        </label>
+                        <div class="zf-tempContDiv">
+                          <select
+                            class="zf-form-sBox"
+                            name="Dropdown9"
+                            checktype="c1"
+                          >
+                            <option selected="true" value="-Select-">
+                              -Select-
+                            </option>
+                            <option value="WS">WS</option>
+                            <option value="RTL">RTL</option>
+                            <option value="HoReCa">HoReCa</option>
+                          </select>
+                          <p
+                            id="Dropdown9_error"
+                            class="zf-errorMessage"
+                            style="display: none"
+                          >
+                            Invalid value
+                          </p>
+                        </div>
+                        <div class="zf-clearBoth"></div>
+                      </div>
+                    </li>
+                    <!---------Channel Dropdown Ends Here---------->
+                  </div>
+                </div>
+                <div class="main-f">
+                  <div class="col1" style="display: none">
+                    <li class="zf-tempFrmWrapper zf-large">
+                      <label class="zf-labelName"> Main Phone Number </label>
+                      <div class="zf-tempContDiv">
+                        <select
+                          class="zf-form-sBox"
+                          name="Dropdown6"
+                          checktype="c1"
+                        >
+                          <option selected="true" value="-Select-">
+                            -Select-
+                          </option>
+                          <option value="Mobile&#x20;Phone">
+                            Mobile Phone
+                          </option>
+                          <option value="Work&#x20;Phone" selected>
+                            Work Phone
+                          </option>
+                        </select>
+                        <p
+                          id="Dropdown6_error"
+                          class="zf-errorMessage"
+                          style="display: none"
+                        >
+                          Invalid value
+                        </p>
+                      </div>
+                      <div class="zf-clearBoth"></div>
+                    </li>
+                    <!---------Dropdown Ends Here---------->
+                  </div>
+                </div>
+                <!---------Decision Starts Here---------->
+                <li class="zf-tempFrmWrapper zf-decesion">
+                  <div class="zf-tempContDiv">
+                    <input
+                      type="checkbox"
+                      checktype="c1"
+                      id="DecisionBox1"
+                      name="DecisionBox1"
+                    />
+                    <label for="DecisionBox1" class="zf-labelName"
+                      >Yes, keep me up to date on news and exclusive offers on
+                      products including tobacco.
+                    </label>
+                    <p
+                      id="DecisionBox1_error"
+                      class="zf-errorMessage"
+                      style="display: none"
+                    >
+                      Invalid value
+                    </p>
+                  </div>
+                  <div class="zf-clearBoth"></div>
+                </li>
+                <!---------Decision Ends Here---------->
+                <input
+                  type="button"
+                  name="next"
+                  class="next action-button"
+                  value="Next"
+                  onclick="zf_ValidateAndSubmit()"
+                />
+
+                <!---------Description Starts Here---------->
+                <li class="zf-tempFrmWrapper zf-note">
+                  <label class="zf-descFld">
+                    <div>
+                      All Hookah for Business accounts are subject to approval.
+                      By submitting this application, I acknowledge that I have
+                      read and agree to the
+                      <a
+                        href="https://business.hookah.com/content/terms-and-conditions"
+                        target="_blank"
+                        >Terms and Conditions</a
+                      >
+                      and
+                      <a
+                        href="https://business.hookah.com/content/privacy-policy-business"
+                        target="_blank"
+                        >Privacy Policy</a
+                      >
+                      <br />
+                    </div>
+                  </label>
+                  <div class="zf-clearBoth"></div>
+                </li>
+                <!---------Description Ends Here---------->
+              </fieldset>
+              <fieldset>
+                <!---------Section Starts Here---------->
+                <li class="zf-tempFrmWrapper zf-section">
+                  <h2>Shipping Address</h2>
+                  <p></p>
+                </li>
+                <!---------Section Ends Here---------->
+                <div class="main-f">
+                  <div class="col1">
+                    <!---------Dropdown Starts Here---------->
                     <li class="zf-tempFrmWrapper zf-small">
                       <label class="zf-labelName">
                         Address Type
-                        <em class="zf-important" id="required_addressType">*</em></label>
+                        <em class="zf-important">*</em>
+                      </label>
                       <div class="zf-tempContDiv">
-                        <select class="zf-form-sBox" name="Dropdown7" checktype="c1">
+                        <select
+                          class="zf-form-sBox"
+                          name="Dropdown2"
+                          checktype="c1"
+                        >
                           <option selected="true" value="-Select-">
                             Select an option
                           </option>
@@ -504,7 +557,9 @@
                           <option value="Business&#x20;Location">
                             Business Location
                           </option>
-                          <option value="Alternative&#x20;Business&#x20;Location">
+                          <option
+                            value="Alternative&#x20;Business&#x20;Location"
+                          >
                             Alternative Business Location
                           </option>
                           <option value="Freight&#x20;Forwarder">
@@ -514,203 +569,61 @@
                             Freight Pickup Center
                           </option>
                         </select>
-                        <p id="Dropdown7_error" class="zf-errorMessage" style="display: none">
+                        <p
+                          id="Dropdown2_error"
+                          class="zf-errorMessage"
+                          style="display: none"
+                        >
                           Invalid value
                         </p>
                       </div>
                       <div class="zf-clearBoth"></div>
-                      <p id="Address_error" class="zf-errorMessage" style="display: none">
-                        Invalid value
-                      </p>
                     </li>
+                    <!---------Dropdown Ends Here---------->
                   </div>
                   <div class="col2"></div>
                 </div>
-                <!---------Dropdown Ends Here---------->
-                <!---------Dropdown Starts Here---------->
                 <div class="main-f">
                   <div class="col1">
+                    <!---------Dropdown Starts Here---------->
                     <li class="zf-tempFrmWrapper zf-small">
                       <label class="zf-labelName">
                         Country
-                        <em class="zf-important" id="required_addressType">*</em></label>
+                        <em class="zf-important">*</em>
+                      </label>
                       <div class="zf-tempContDiv">
-                        <select class="zf-form-sBox dropdown-countries-sameasbilling" name="Dropdown8" checktype="c1"
-                          id="countryF2">
-                          <option value="" id="country" selected="selected" disabled>Select Country
+                        <select
+                          class="zf-form-sBox dropdown-countries"
+                          name="Dropdown5"
+                          checktype="c1"
+                          id="countryF1"
+                        >
+                          <option
+                            value=""
+                            id="country"
+                            selected="selected"
+                            disabled
+                          >
+                            Select Country
                           </option>
-                          <option value="ALA">Åland Islands</option>
-                          <option value="ASM">American Samoa</option>
-                          <option value="AND">Andorra</option>
-                          <option value="AIA">Anguilla</option>
-                          <option value="ARG">Argentina</option>
-                          <option value="ARM">Armenia</option>
-                          <option value="ABW">Aruba</option>
-                          <option value="AUT">Austria</option>
-                          <option value="BHS">Bahamas</option>
-                          <option value="BHR">Bahrain</option>
-                          <option value="BGD">Bangladesh</option>
-                          <option value="BRB">Barbados</option>
-                          <option value="BEL">Belgium</option>
-                          <option value="BLZ">Belize</option>
-                          <option value="BMU">Bermuda</option>
-                          <option value="BOL">Bolivia</option>
-                          <option value="BIH">Bosnia & Herzegovina</option>
-                          <option value="BRA">Brazil</option>
-                          <option value="IOT">British Indian Ocean Territory</option>
-                          <option value="VGB">British Virgin Islands</option>
-                          <option value="BGR">Bulgaria</option>
-                          <option value="KHM">Cambodia</option>
                           <option value="CAN">Canada</option>
-                          <option value="BES">Caribbean Netherlands</option>
-                          <option value="CYM">Cayman Islands</option>
-                          <option value="CHL">Chile</option>
-                          <option value="CHN">China</option>
-                          <option value="CXR">Christmas Island</option>
-                          <option value="CCK">Cocos (Keeling) Islands</option>
-                          <option value="COL">Colombia</option>
-                          <option value="COK">Cook Islands</option>
-                          <option value="CRI">Costa Rica</option>
-                          <option value="HRV">Croatia</option>
-                          <option value="CUW">Curaçao</option>
-                          <option value="CYP">Cyprus</option>
-                          <option value="CZE">Czechia</option>
-                          <option value="DNK">Denmark</option>
-                          <option value="DMA">Dominica</option>
-                          <option value="DOM">Dominican Republic</option>
-                          <option value="ECU">Ecuador</option>
-                          <option value="SLV">El Salvador</option>
-                          <option value="EST">Estonia</option>
-                          <option value="FLK">Falkland Islands</option>
-                          <option value="FRO">Faroe Islands</option>
-                          <option value="FJI">Fiji</option>
-                          <option value="FIN">Finland</option>
-                          <option value="GEO">Georgia</option>
-                          <option value="DEU">Germany</option>
-                          <option value="GIB">Gibraltar</option>
-                          <option value="GRC">Greece</option>
-                          <option value="GRL">Greenland</option>
-                          <option value="GRD">Grenada</option>
-                          <option value="GLP">Guadeloupe</option>
-                          <option value="GUM">Guam</option>
-                          <option value="GTM">Guatemala</option>
-                          <option value="GGY">Guernsey</option>
-                          <option value="GUY">Guyana</option>
-                          <option value="HTI">Haiti</option>
-                          <option value="HMD">Heard & McDonald Islands</option>
-                          <option value="HND">Honduras</option>
-                          <option value="HKG">Hong Kong SAR China</option>
-                          <option value="HUN">Hungary</option>
-                          <option value="ISL">Iceland</option>
-                          <option value="IND">India</option>
-                          <option value="IDN">Indonesia</option>
-                          <option value="IRQ">Iraq</option>
-                          <option value="IRL">Ireland</option>
-                          <option value="IMN">Isle of Man</option>
-                          <option value="ITA">Italy</option>
-                          <option value="JAM">Jamaica</option>
-                          <option value="JPN">Japan</option>
-                          <option value="JEY">Jersey</option>
-                          <option value="JOR">Jordan</option>
-                          <option value="KAZ">Kazakhstan</option>
-                          <option value="KIR">Kiribati</option>
-                          <option value="XKS">Kosovo</option>
-                          <option value="KWT">Kuwait</option>
-                          <option value="KGZ">Kyrgyzstan</option>
-                          <option value="LVA">Latvia</option>
-                          <option value="LBN">Lebanon</option>
-                          <option value="LIE">Liechtenstein</option>
-                          <option value="LTU">Lithuania</option>
-                          <option value="LUX">Luxembourg</option>
-                          <option value="MAC">Macao SAR China</option>
-                          <option value="MYS">Malaysia</option>
-                          <option value="MDV">Maldives</option>
-                          <option value="MLT">Malta</option>
-                          <option value="MHL">Marshall Islands</option>
-                          <option value="MTQ">Martinique</option>
-                          <option value="MYT">Mayotte</option>
                           <option value="MEX">Mexico</option>
-                          <option value="FSM">Micronesia</option>
-                          <option value="MDA">Moldova</option>
-                          <option value="MCO">Monaco</option>
-                          <option value="MNG">Mongolia</option>
-                          <option value="MNE">Montenegro</option>
-                          <option value="MSR">Montserrat</option>
-                          <option value="NRU">Nauru</option>
-                          <option value="NPL">Nepal</option>
-                          <option value="NLD">Netherlands</option>
-                          <option value="NCL">New Caledonia</option>
-                          <option value="NIC">Nicaragua</option>
-                          <option value="NIU">Niue</option>
-                          <option value="NFK">Norfolk Island</option>
-                          <option value="MKD">North Macedonia</option>
-                          <option value="MNP">Northern Mariana Islands</option>
-                          <option value="NOR">Norway</option>
-                          <option value="OMN">Oman</option>
-                          <option value="PLW">Palau</option>
-                          <option value="PAN">Panama</option>
-                          <option value="PNG">Papua New Guinea</option>
-                          <option value="PRY">Paraguay</option>
-                          <option value="PER">Peru</option>
-                          <option value="PHL">Philippines</option>
-                          <option value="PCN">Pitcairn Islands</option>
-                          <option value="POL">Poland</option>
-                          <option value="PRT">Portugal</option>
-                          <option value="QAT">Qatar</option>
-                          <option value="SMR">San Marino</option>
-                          <option value="SAU">Saudi Arabia</option>
-                          <option value="SRB">Serbia</option>
-                          <option value="SGP">Singapore</option>
-                          <option value="SXM">Sint Maarten</option>
-                          <option value="SVK">Slovakia</option>
-                          <option value="SVN">Slovenia</option>
-                          <option value="SLB">Solomon Islands</option>
-                          <option value="ZAF">South Africa</option>
-                          <option value="SGS">South Georgia & South Sandwich Islands</option>
-                          <option value="KOR">South Korea</option>
-                          <option value="ESP">Spain</option>
-                          <option value="LKA">Sri Lanka</option>
-                          <option value="BLM">St. Barthélemy</option>
-                          <option value="SHN">St. Helena</option>
-                          <option value="KNA">St. Kitts & Nevis</option>
-                          <option value="LCA">St. Lucia</option>
-                          <option value="MAF">St. Martin</option>
-                          <option value="SPM">St. Pierre & Miquelon</option>
-                          <option value="VCT">St. Vincent & Grenadines</option>
-                          <option value="SJM">Svalbard & Jan Mayen</option>
-                          <option value="SWE">Sweden</option>
-                          <option value="CHE">Switzerland</option>
-                          <option value="TWN">Taiwan, Province of China</option>
-                          <option value="TJK">Tajikistan</option>
-                          <option value="THA">Thailand</option>
-                          <option value="TON">Tonga</option>
-                          <option value="TTO">Trinidad and Tobago</option>
-                          <option value="TUR">Turkey</option>
-                          <option value="TCA">Turks & Caicos Islands</option>
-                          <option value="UMI">U.S. Outlying Islands</option>
-                          <option value="VIR">U.S. Virgin Islands</option>
-                          <option value="UKR">Ukraine</option>
-                          <option value="ARE">United Arab Emirates</option>
-                          <option value="GBR">United Kingdom</option>
                           <option value="USA">United States of America</option>
-                          <option value="URY">Uruguay</option>
-                          <option value="UZB">Uzbekistan</option>
-                          <option value="VAT">Vatican City</option>
-                          <option value="VEN">Venezuela</option>
-                          <option value="VNM">Vietnam</option>
-                          <option value="WLF">Wallis & Futuna</option>
-                          <option value="ESH">Western Sahara</option>
                         </select>
-                        <p id="Dropdown8_error" class="zf-errorMessage" style="display: none">
+                        <p
+                          id="Dropdown5_error"
+                          class="zf-errorMessage"
+                          style="display: none"
+                        >
                           Invalid value
                         </p>
                       </div>
                       <div class="zf-clearBoth"></div>
                     </li>
+                    <!---------Dropdown Ends Here---------->
                   </div>
                   <div class="col2"></div>
                 </div>
-                <!---------Dropdown Ends Here---------->
                 <!--address-->
                 <!---------Address Starts Here---------->
                 <li class="zf-tempFrmWrapper zf-address zf-addrlarge">
@@ -719,877 +632,1833 @@
                     <div class="zf-addrCont">
                       <div class="main-f">
                         <div class="col1">
-                          <label class="zf-labelName">
-                            Street Address
-                            <em class="zf-important" id="required_addressType">*</em></label>
-                          <input type="text" maxlength="255" name="Address1_AddressLine1" checktype="c1" placeholder=""
-                            oninput="searchDropdownSameAsBilling()" id="searchAddress2" />
-                          <div class="dropdown-list-SameASBilling"></div>
+                          <label class="zf-labelName"
+                            >Street Address
+                            <em class="zf-important">*</em>
+                          </label>
+                          <input
+                            type="text"
+                            maxlength="255"
+                            name="Address_AddressLine1"
+                            checktype="c1"
+                            placeholder=""
+                            oninput="searchDropdown()"
+                            id="searchInput"
+                          />
+                          <div class="dropdown-list"></div>
                         </div>
                         <div class="col2">
-                          <label class="zf-labelName">
-                            Suite, Unit, Apartment, Box
-                            <em class="zf-important" id="required_addressType">*</em></label>
-                          <input type="text" maxlength="255" name="Address1_AddressLine2" checktype="c1" placeholder=""
-                            id="suite_unit_apt_box_v2" />
+                          <label class="zf-labelName"
+                            >Suite, Unit, Apartment, Box
+                            <em class="zf-important"></em>
+                          </label>
+                          <input
+                            type="text"
+                            maxlength="255"
+                            name="Address_AddressLine2"
+                            checktype="c1"
+                            placeholder=""
+                            id="suite_unit_apt_box_v1"
+                          />
                         </div>
                       </div>
                       <div class="main-f">
                         <div class="col1">
-                          <label class="zf-labelName">
-                            City
-                            <em class="zf-important" id="required_addressType">*</em></label>
-                          <input type="text" maxlength="255" name="Address1_City" checktype="c1" placeholder=""
-                            id="cityV2" />
+                          <label class="zf-labelName"
+                            >City
+                            <em class="zf-important">*</em>
+                          </label>
+                          <input
+                            type="text"
+                            maxlength="255"
+                            name="Address_City"
+                            checktype="c1"
+                            placeholder=""
+                            id="cityV1"
+                          />
                         </div>
                         <div class="col2">
-                          <label class="zf-labelName">
-                            State &#x2f; Region &#x2f; Province
-                            <em class="zf-important" id="required_addressType">*</em></label>
-                          <select class="state-dropdown-v2" checktype="c1" placeholder="">
-                            <option value="" selected="selected">Select State</option>
+                          <label class="zf-labelName"
+                            >State &#x2f; Region &#x2f; Province
+                            <em class="zf-important star" id="state_star">*</em>
+                          </label>
+                          <select
+                            class="state-dropdown"
+                            checktype="c1"
+                            placeholder=""
+                          >
+                            <option
+                              value=""
+                              selected="selected"
+                              name="Address_Region"
+                            >
+                              Select State
+                            </option>
                           </select>
-                          <input type="text" class="state-text-v2" checktype="c1" name="Address1_Region" placeholder=""
-                            autocomplete="off" id="Region">
+                          <input
+                            type="text"
+                            class="state-text"
+                            checktype="c1"
+                            name="Address_Region"
+                            placeholder=""
+                            autocomplete="off"
+                          />
                         </div>
-
                       </div>
                       <div class="main-f">
                         <div class="col1">
-                          <label class="zf-labelName">
-                            Postal &#x2f; Zip Code
-                            <em class="zf-important" id="required_addressType">*</em></label>
-                          <input type="text" maxlength="255" name="Address1_ZipCode" checktype="c1" placeholder=""
-                            id="postalCodeV2" />
+                          <label class="zf-labelName"
+                            >Postal &#x2f; Zip Code
+                            <em class="zf-important">*</em>
+                          </label>
+                          <input
+                            type="text"
+                            maxlength="255"
+                            name="Address_ZipCode"
+                            checktype="c1"
+                            placeholder=""
+                            id="postalCode"
+                          />
                         </div>
                         <div class="col2">
-                          <div class="zf-tempContDiv" style="display: none;">
-                            <span> <input type="text" name="SingleLine7" checktype="c1" value="" maxlength="255"
-                                fieldType=1 placeholder="" id="stateLabelV2" /></span>
-                            <p id="SingleLine7_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                          <div class="zf-tempContDiv" style="display: none">
+                            <span>
+                              <input
+                                type="text"
+                                name="SingleLine5"
+                                checktype="c1"
+                                value=""
+                                maxlength="255"
+                                fieldType="1"
+                                placeholder=""
+                                id="stateLabel"
+                            /></span>
+                            <p
+                              id="SingleLine5_error"
+                              class="zf-errorMessage"
+                              style="display: none"
+                            >
+                              Invalid value
+                            </p>
                           </div>
                         </div>
                       </div>
-                      <div class="zf-clearBoth"></div>
-                      <p id="Address1_error" class="zf-errorMessage" style="display: none">
-                        Invalid value
-                      </p>
+                      <!---------Single Line Starts Here---------->
                     </div>
                   </div>
                   <div class="zf-eclearBoth"></div>
                 </li>
-              </div>
-              <!---------Address Ends Here---------->
-              <div class="bin">
-                <input type="button" name="previous" class="previous action-button-previous" id="pre-first"
-                  value="Previous" />
-                <input type="button" name="next" class="next action-button" value="Next"
-                  onclick="zf_ValidateAndSubmit()" />
-              </div>
-            </fieldset>
-            <fieldset>
-              <!---------Section Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-section">
-                <h2>
-                  Upload Supporting Documents &#x28;U.S. Businesses&#x29;
-                </h2>
-                <p></p>
-              </li>
-              <!---------Section Ends Here---------->
-              <!---------Description Starts Here---------->
-              <div>
-                <li class="zf-tempFrmWrapper zf-note">
-                  <label>
-                    <div style="font-size: 14px; color: #1b1c1f">
-                      Before activating your account, we are required by law
-                      to verify your license(s). For faster processing, we
-                      recommend uploading the licenses required by your state
-                      at submission. If you skip this step, we will email you
-                      with a link to upload documents.
-                    </div>
-                  </label>
-                  <div class="zf-clearBoth"></div>
-                </li>
-                <!---------Description Ends Here---------->
+                <!---------Address Ends Here---------->
                 <!---------Section Starts Here---------->
                 <li class="zf-tempFrmWrapper zf-section">
-                  <h2>Employer Identification Number</h2>
+                  <h2>Billing Address&#x2f;Tax Location Address</h2>
                   <p></p>
                 </li>
                 <!---------Section Ends Here---------->
-                <!---------Single Line Starts Here---------->
-                <div class="main-f">
-                  <div class="col1">
-                    <li class="zf-tempFrmWrapper zf-small">
-                      <label class="zf-labelName">
-                        Employer Identification Number &#x28;EIN&#x29;
+                <!---------Decision Starts Here---------->
+                <li class="zf-tempFrmWrapper zf-decesion">
+                  <div class="zf-tempContDiv">
+                    <input
+                      type="checkbox"
+                      checktype="c1"
+                      checked="true"
+                      id="DecisionBox3"
+                      name="DecisionBox3"
+                      class="same"
+                    />
+                    <label for="DecisionBox3" class="zf-labelName"
+                      >Same as shipping
+                    </label>
+                    <p
+                      id="DecisionBox3_error"
+                      class="zf-errorMessage"
+                      style="display: none"
+                    >
+                      Invalid value
+                    </p>
+                  </div>
+                  <div class="zf-clearBoth"></div>
+                </li>
+                <!---------Decision Ends Here---------->
+                <!---------Dropdown Starts Here---------->
+                <div id="addressType" style="display: none">
+                  <div class="main-f">
+                    <div class="col1">
+                      <li class="zf-tempFrmWrapper zf-small">
+                        <label class="zf-labelName">
+                          Address Type
+                          <em class="zf-important" id="required_addressType"
+                            >*</em
+                          ></label
+                        >
+                        <div class="zf-tempContDiv">
+                          <select
+                            class="zf-form-sBox"
+                            name="Dropdown7"
+                            checktype="c1"
+                          >
+                            <option selected="true" value="-Select-">
+                              Select an option
+                            </option>
+                            <option value="Residential">Residential</option>
+                            <option value="Business&#x20;Location">
+                              Business Location
+                            </option>
+                            <option
+                              value="Alternative&#x20;Business&#x20;Location"
+                            >
+                              Alternative Business Location
+                            </option>
+                            <option value="Freight&#x20;Forwarder">
+                              Freight Forwarder
+                            </option>
+                            <option value="Freight&#x20;Pickup&#x20;Center">
+                              Freight Pickup Center
+                            </option>
+                          </select>
+                          <p
+                            id="Dropdown7_error"
+                            class="zf-errorMessage"
+                            style="display: none"
+                          >
+                            Invalid value
+                          </p>
+                        </div>
+                        <div class="zf-clearBoth"></div>
+                        <p
+                          id="Address_error"
+                          class="zf-errorMessage"
+                          style="display: none"
+                        >
+                          Invalid value
+                        </p>
+                      </li>
+                    </div>
+                    <div class="col2"></div>
+                  </div>
+                  <!---------Dropdown Ends Here---------->
+                  <!---------Dropdown Starts Here---------->
+                  <div class="main-f">
+                    <div class="col1">
+                      <li class="zf-tempFrmWrapper zf-small">
+                        <label class="zf-labelName">
+                          Country
+                          <em class="zf-important" id="required_addressType"
+                            >*</em
+                          ></label
+                        >
+                        <div class="zf-tempContDiv">
+                          <select
+                            class="zf-form-sBox dropdown-countries-sameasbilling"
+                            name="Dropdown8"
+                            checktype="c1"
+                            id="countryF2"
+                          >
+                            <option
+                              value=""
+                              id="country"
+                              selected="selected"
+                              disabled
+                            >
+                              Select Country
+                            </option>
+                            <option value="ALA">Åland Islands</option>
+                            <option value="ASM">American Samoa</option>
+                            <option value="AND">Andorra</option>
+                            <option value="AIA">Anguilla</option>
+                            <option value="ARG">Argentina</option>
+                            <option value="ARM">Armenia</option>
+                            <option value="ABW">Aruba</option>
+                            <option value="AUT">Austria</option>
+                            <option value="BHS">Bahamas</option>
+                            <option value="BHR">Bahrain</option>
+                            <option value="BGD">Bangladesh</option>
+                            <option value="BRB">Barbados</option>
+                            <option value="BEL">Belgium</option>
+                            <option value="BLZ">Belize</option>
+                            <option value="BMU">Bermuda</option>
+                            <option value="BOL">Bolivia</option>
+                            <option value="BIH">Bosnia & Herzegovina</option>
+                            <option value="BRA">Brazil</option>
+                            <option value="IOT">
+                              British Indian Ocean Territory
+                            </option>
+                            <option value="VGB">British Virgin Islands</option>
+                            <option value="BGR">Bulgaria</option>
+                            <option value="KHM">Cambodia</option>
+                            <option value="CAN">Canada</option>
+                            <option value="BES">Caribbean Netherlands</option>
+                            <option value="CYM">Cayman Islands</option>
+                            <option value="CHL">Chile</option>
+                            <option value="CHN">China</option>
+                            <option value="CXR">Christmas Island</option>
+                            <option value="CCK">Cocos (Keeling) Islands</option>
+                            <option value="COL">Colombia</option>
+                            <option value="COK">Cook Islands</option>
+                            <option value="CRI">Costa Rica</option>
+                            <option value="HRV">Croatia</option>
+                            <option value="CUW">Curaçao</option>
+                            <option value="CYP">Cyprus</option>
+                            <option value="CZE">Czechia</option>
+                            <option value="DNK">Denmark</option>
+                            <option value="DMA">Dominica</option>
+                            <option value="DOM">Dominican Republic</option>
+                            <option value="ECU">Ecuador</option>
+                            <option value="SLV">El Salvador</option>
+                            <option value="EST">Estonia</option>
+                            <option value="FLK">Falkland Islands</option>
+                            <option value="FRO">Faroe Islands</option>
+                            <option value="FJI">Fiji</option>
+                            <option value="FIN">Finland</option>
+                            <option value="GEO">Georgia</option>
+                            <option value="DEU">Germany</option>
+                            <option value="GIB">Gibraltar</option>
+                            <option value="GRC">Greece</option>
+                            <option value="GRL">Greenland</option>
+                            <option value="GRD">Grenada</option>
+                            <option value="GLP">Guadeloupe</option>
+                            <option value="GUM">Guam</option>
+                            <option value="GTM">Guatemala</option>
+                            <option value="GGY">Guernsey</option>
+                            <option value="GUY">Guyana</option>
+                            <option value="HTI">Haiti</option>
+                            <option value="HMD">
+                              Heard & McDonald Islands
+                            </option>
+                            <option value="HND">Honduras</option>
+                            <option value="HKG">Hong Kong SAR China</option>
+                            <option value="HUN">Hungary</option>
+                            <option value="ISL">Iceland</option>
+                            <option value="IND">India</option>
+                            <option value="IDN">Indonesia</option>
+                            <option value="IRQ">Iraq</option>
+                            <option value="IRL">Ireland</option>
+                            <option value="IMN">Isle of Man</option>
+                            <option value="ITA">Italy</option>
+                            <option value="JAM">Jamaica</option>
+                            <option value="JPN">Japan</option>
+                            <option value="JEY">Jersey</option>
+                            <option value="JOR">Jordan</option>
+                            <option value="KAZ">Kazakhstan</option>
+                            <option value="KIR">Kiribati</option>
+                            <option value="XKS">Kosovo</option>
+                            <option value="KWT">Kuwait</option>
+                            <option value="KGZ">Kyrgyzstan</option>
+                            <option value="LVA">Latvia</option>
+                            <option value="LBN">Lebanon</option>
+                            <option value="LIE">Liechtenstein</option>
+                            <option value="LTU">Lithuania</option>
+                            <option value="LUX">Luxembourg</option>
+                            <option value="MAC">Macao SAR China</option>
+                            <option value="MYS">Malaysia</option>
+                            <option value="MDV">Maldives</option>
+                            <option value="MLT">Malta</option>
+                            <option value="MHL">Marshall Islands</option>
+                            <option value="MTQ">Martinique</option>
+                            <option value="MYT">Mayotte</option>
+                            <option value="MEX">Mexico</option>
+                            <option value="FSM">Micronesia</option>
+                            <option value="MDA">Moldova</option>
+                            <option value="MCO">Monaco</option>
+                            <option value="MNG">Mongolia</option>
+                            <option value="MNE">Montenegro</option>
+                            <option value="MSR">Montserrat</option>
+                            <option value="NRU">Nauru</option>
+                            <option value="NPL">Nepal</option>
+                            <option value="NLD">Netherlands</option>
+                            <option value="NCL">New Caledonia</option>
+                            <option value="NIC">Nicaragua</option>
+                            <option value="NIU">Niue</option>
+                            <option value="NFK">Norfolk Island</option>
+                            <option value="MKD">North Macedonia</option>
+                            <option value="MNP">
+                              Northern Mariana Islands
+                            </option>
+                            <option value="NOR">Norway</option>
+                            <option value="OMN">Oman</option>
+                            <option value="PLW">Palau</option>
+                            <option value="PAN">Panama</option>
+                            <option value="PNG">Papua New Guinea</option>
+                            <option value="PRY">Paraguay</option>
+                            <option value="PER">Peru</option>
+                            <option value="PHL">Philippines</option>
+                            <option value="PCN">Pitcairn Islands</option>
+                            <option value="POL">Poland</option>
+                            <option value="PRT">Portugal</option>
+                            <option value="QAT">Qatar</option>
+                            <option value="SMR">San Marino</option>
+                            <option value="SAU">Saudi Arabia</option>
+                            <option value="SRB">Serbia</option>
+                            <option value="SGP">Singapore</option>
+                            <option value="SXM">Sint Maarten</option>
+                            <option value="SVK">Slovakia</option>
+                            <option value="SVN">Slovenia</option>
+                            <option value="SLB">Solomon Islands</option>
+                            <option value="ZAF">South Africa</option>
+                            <option value="SGS">
+                              South Georgia & South Sandwich Islands
+                            </option>
+                            <option value="KOR">South Korea</option>
+                            <option value="ESP">Spain</option>
+                            <option value="LKA">Sri Lanka</option>
+                            <option value="BLM">St. Barthélemy</option>
+                            <option value="SHN">St. Helena</option>
+                            <option value="KNA">St. Kitts & Nevis</option>
+                            <option value="LCA">St. Lucia</option>
+                            <option value="MAF">St. Martin</option>
+                            <option value="SPM">St. Pierre & Miquelon</option>
+                            <option value="VCT">
+                              St. Vincent & Grenadines
+                            </option>
+                            <option value="SJM">Svalbard & Jan Mayen</option>
+                            <option value="SWE">Sweden</option>
+                            <option value="CHE">Switzerland</option>
+                            <option value="TWN">
+                              Taiwan, Province of China
+                            </option>
+                            <option value="TJK">Tajikistan</option>
+                            <option value="THA">Thailand</option>
+                            <option value="TON">Tonga</option>
+                            <option value="TTO">Trinidad and Tobago</option>
+                            <option value="TUR">Turkey</option>
+                            <option value="TCA">Turks & Caicos Islands</option>
+                            <option value="UMI">U.S. Outlying Islands</option>
+                            <option value="VIR">U.S. Virgin Islands</option>
+                            <option value="UKR">Ukraine</option>
+                            <option value="ARE">United Arab Emirates</option>
+                            <option value="GBR">United Kingdom</option>
+                            <option value="USA">
+                              United States of America
+                            </option>
+                            <option value="URY">Uruguay</option>
+                            <option value="UZB">Uzbekistan</option>
+                            <option value="VAT">Vatican City</option>
+                            <option value="VEN">Venezuela</option>
+                            <option value="VNM">Vietnam</option>
+                            <option value="WLF">Wallis & Futuna</option>
+                            <option value="ESH">Western Sahara</option>
+                          </select>
+                          <p
+                            id="Dropdown8_error"
+                            class="zf-errorMessage"
+                            style="display: none"
+                          >
+                            Invalid value
+                          </p>
+                        </div>
+                        <div class="zf-clearBoth"></div>
+                      </li>
+                    </div>
+                    <div class="col2"></div>
+                  </div>
+                  <!---------Dropdown Ends Here---------->
+                  <!--address-->
+                  <!---------Address Starts Here---------->
+                  <li class="zf-tempFrmWrapper zf-address zf-addrlarge">
+                    <label class="zf-labelName"> </label>
+                    <div class="zf-tempContDiv zf-address">
+                      <div class="zf-addrCont">
+                        <div class="main-f">
+                          <div class="col1">
+                            <label class="zf-labelName">
+                              Street Address
+                              <em class="zf-important" id="required_addressType"
+                                >*</em
+                              ></label
+                            >
+                            <input
+                              type="text"
+                              maxlength="255"
+                              name="Address1_AddressLine1"
+                              checktype="c1"
+                              placeholder=""
+                              oninput="searchDropdownSameAsBilling()"
+                              id="searchAddress2"
+                            />
+                            <div class="dropdown-list-SameASBilling"></div>
+                          </div>
+                          <div class="col2">
+                            <label class="zf-labelName">
+                              Suite, Unit, Apartment, Box
+                              <em class="zf-important" id="required_addressType"
+                                >*</em
+                              ></label
+                            >
+                            <input
+                              type="text"
+                              maxlength="255"
+                              name="Address1_AddressLine2"
+                              checktype="c1"
+                              placeholder=""
+                              id="suite_unit_apt_box_v2"
+                            />
+                          </div>
+                        </div>
+                        <div class="main-f">
+                          <div class="col1">
+                            <label class="zf-labelName">
+                              City
+                              <em class="zf-important" id="required_addressType"
+                                >*</em
+                              ></label
+                            >
+                            <input
+                              type="text"
+                              maxlength="255"
+                              name="Address1_City"
+                              checktype="c1"
+                              placeholder=""
+                              id="cityV2"
+                            />
+                          </div>
+                          <div class="col2">
+                            <label class="zf-labelName">
+                              State &#x2f; Region &#x2f; Province
+                              <em class="zf-important" id="required_addressType"
+                                >*</em
+                              ></label
+                            >
+                            <select
+                              class="state-dropdown-v2"
+                              checktype="c1"
+                              placeholder=""
+                            >
+                              <option value="" selected="selected">
+                                Select State
+                              </option>
+                            </select>
+                            <input
+                              type="text"
+                              class="state-text-v2"
+                              checktype="c1"
+                              name="Address1_Region"
+                              placeholder=""
+                              autocomplete="off"
+                              id="Region"
+                            />
+                          </div>
+                        </div>
+                        <div class="main-f">
+                          <div class="col1">
+                            <label class="zf-labelName">
+                              Postal &#x2f; Zip Code
+                              <em class="zf-important" id="required_addressType"
+                                >*</em
+                              ></label
+                            >
+                            <input
+                              type="text"
+                              maxlength="255"
+                              name="Address1_ZipCode"
+                              checktype="c1"
+                              placeholder=""
+                              id="postalCodeV2"
+                            />
+                          </div>
+                          <div class="col2">
+                            <div class="zf-tempContDiv" style="display: none">
+                              <span>
+                                <input
+                                  type="text"
+                                  name="SingleLine7"
+                                  checktype="c1"
+                                  value=""
+                                  maxlength="255"
+                                  fieldType="1"
+                                  placeholder=""
+                                  id="stateLabelV2"
+                              /></span>
+                              <p
+                                id="SingleLine7_error"
+                                class="zf-errorMessage"
+                                style="display: none"
+                              >
+                                Invalid value
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="zf-clearBoth"></div>
+                        <p
+                          id="Address1_error"
+                          class="zf-errorMessage"
+                          style="display: none"
+                        >
+                          Invalid value
+                        </p>
+                      </div>
+                    </div>
+                    <div class="zf-eclearBoth"></div>
+                  </li>
+                </div>
+                <!---------Address Ends Here---------->
+                <div class="bin">
+                  <input
+                    type="button"
+                    name="previous"
+                    class="previous action-button-previous"
+                    id="pre-first"
+                    value="Previous"
+                  />
+                  <input
+                    type="button"
+                    name="next"
+                    class="next action-button"
+                    value="Next"
+                    onclick="zf_ValidateAndSubmit()"
+                  />
+                </div>
+              </fieldset>
+              <fieldset>
+                <!---------Section Starts Here---------->
+                <li class="zf-tempFrmWrapper zf-section">
+                  <h2>
+                    Upload Supporting Documents &#x28;U.S. Businesses&#x29;
+                  </h2>
+                  <p></p>
+                </li>
+                <!---------Section Ends Here---------->
+                <!---------Description Starts Here---------->
+                <div>
+                  <li class="zf-tempFrmWrapper zf-note">
+                    <label>
+                      <div style="font-size: 14px; color: #1b1c1f">
+                        Before activating your account, we are required by law
+                        to verify your license(s). For faster processing, we
+                        recommend uploading the licenses required by your state
+                        at submission. If you skip this step, we will email you
+                        with a link to upload documents.
+                      </div>
+                    </label>
+                    <div class="zf-clearBoth"></div>
+                  </li>
+                  <!---------Description Ends Here---------->
+                  <!---------Section Starts Here---------->
+                  <li class="zf-tempFrmWrapper zf-section">
+                    <h2>Employer Identification Number</h2>
+                    <p></p>
+                  </li>
+                  <!---------Section Ends Here---------->
+                  <!---------Single Line Starts Here---------->
+                  <div class="main-f">
+                    <div class="col1">
+                      <li class="zf-tempFrmWrapper zf-small">
+                        <label class="zf-labelName">
+                          Employer Identification Number &#x28;EIN&#x29;
+                        </label>
+                        <div class="zf-tempContDiv">
+                          <span>
+                            <input
+                              type="text"
+                              name="SingleLine1"
+                              checktype="c1"
+                              value=""
+                              maxlength="255"
+                              fieldType="1"
+                              placeholder=""
+                          /></span>
+                          <p
+                            id="SingleLine1_error"
+                            class="zf-errorMessage"
+                            style="display: none"
+                          >
+                            Invalid value
+                          </p>
+                        </div>
+                        <div class="zf-clearBoth"></div>
+                      </li>
+                    </div>
+                    <div class="col2"></div>
+                  </div>
+                  <!---------Single Line Ends Here---------->
+                  <!---------Section Starts Here---------->
+                  <li class="zf-tempFrmWrapper zf-section">
+                    <h2>Resale&#x2f;Sales Tax License</h2>
+                    <p></p>
+                  </li>
+                  <!---------Section Ends Here---------->
+                  <!---------Description Starts Here---------->
+                  <div class="parag">
+                    <li class="zf-tempFrmWrapper zf-note">
+                      <label>
+                        <div class="parain">
+                          Retailers: Required in all states except AK, DE, MO,
+                          NH, OR
+                        </div>
                       </label>
-                      <div class="zf-tempContDiv">
-                        <span>
-                          <input type="text" name="SingleLine1" checktype="c1" value="" maxlength="255" fieldType="1"
-                            placeholder="" /></span>
-                        <p id="SingleLine1_error" class="zf-errorMessage" style="display: none">
-                          Invalid value
-                        </p>
-                      </div>
+                      <div class="zf-clearBoth"></div>
+                    </li>
+                    <!---------Description Ends Here---------->
+                    <!---------Description Starts Here---------->
+                    <li class="zf-tempFrmWrapper zf-note">
+                      <label>
+                        <div class="parain">
+                          Wholesalers: Required in AK, AR, DE, DC, KY, MO, NE,
+                          NH, NC, OH, SC, VA, WI WY
+                        </div>
+                      </label>
                       <div class="zf-clearBoth"></div>
                     </li>
                   </div>
-                  <div class="col2"></div>
-                </div>
-                <!---------Single Line Ends Here---------->
-                <!---------Section Starts Here---------->
-                <li class="zf-tempFrmWrapper zf-section">
-                  <h2>Resale&#x2f;Sales Tax License</h2>
-                  <p></p>
-                </li>
-                <!---------Section Ends Here---------->
-                <!---------Description Starts Here---------->
-                <div class="parag">
-                  <li class="zf-tempFrmWrapper zf-note">
-                    <label>
-                      <div class="parain">
-                        Retailers: Required in all states except AK, DE, MO,
-                        NH, OR
-                      </div>
-                    </label>
-                    <div class="zf-clearBoth"></div>
-                  </li>
                   <!---------Description Ends Here---------->
-                  <!---------Description Starts Here---------->
-                  <li class="zf-tempFrmWrapper zf-note">
-                    <label>
-                      <div class="parain">
-                        Wholesalers: Required in AK, AR, DE, DC, KY, MO, NE,
-                        NH, NC, OH, SC, VA, WI WY
+                  <div class="main-f">
+                    <!---------Single Line Starts Here---------->
+                    <div class="col1">
+                      <li class="zf-tempFrmWrapper zf-small">
+                        <label class="zf-labelName"> License Number </label>
+                        <div class="zf-tempContDiv">
+                          <span>
+                            <input
+                              type="text"
+                              name="SingleLine2"
+                              checktype="c1"
+                              value=""
+                              maxlength="255"
+                              fieldType="1"
+                              placeholder=""
+                          /></span>
+                          <p
+                            id="SingleLine2_error"
+                            class="zf-errorMessage"
+                            style="display: none"
+                          >
+                            Invalid value
+                          </p>
+                        </div>
+                        <div class="zf-clearBoth"></div>
+                      </li>
+                    </div>
+                    <!---------Single Line Ends Here---------->
+                    <!---------Date Starts Here---------->
+                    <div class="col2">
+                      <li class="zf-tempFrmWrapper">
+                        <div class="zf-tempContDiv">
+                          <label class="zf-labelName"> Expiration date </label>
+                          <input
+                            type="date"
+                            id="expirationDate"
+                            checktype="c4"
+                            maxlength="25"
+                          />
+                          <input
+                            name="Date"
+                            type="hidden"
+                            name="FormattedDate"
+                            id="formattedExpirationDate"
+                          />
+                          <!-- Span to display the formatted date -->
+
+                          <div class="zf-clearBoth"></div>
+                          <p
+                            id="Date_error"
+                            class="zf-errorMessage"
+                            style="display: none"
+                          >
+                            Invalid value
+                          </p>
+                          <div class="zf-clearBoth"></div>
+                        </div>
+                      </li>
+                    </div>
+                    <!---------Date Ends Here---------->
+                  </div>
+                  <!--fileupload-->
+                  <!---------File Upload Starts Here---------->
+                  <li class="zf-tempFrmWrapper">
+                    <label class="zf-labelName">Resale/Sales Tax License</label>
+                    <div class="zf-tempContDiv">
+                      <label
+                        for="fileInput2"
+                        class="dropzone"
+                        id="dropzoneContainer2"
+                      >
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        <p>
+                          <strong>Drag & Drop</strong>
+                          <span>Browse for files</span>
+                        </p>
+                        <p class="subtext">
+                          Upload PDF, ZIP, doc, or Image (jpg, png, tif, gif,
+                          webp)
+                        </p>
+                      </label>
+                      <input
+                        type="file"
+                        name="FileUpload3"
+                        id="fileInput2"
+                        hidden
+                      />
+
+                      <div id="filePreview2" class="file-preview">
+                        <i class="fa-solid fa-file"></i>
+                        <p id="fileText2"></p>
+                        <i
+                          class="fa-solid fa-trash remove-file"
+                          id="removeFile2"
+                        ></i>
                       </div>
-                    </label>
+
+                      <p
+                        id="FileUpload3_error"
+                        class="zf-errorMessage"
+                        style="display: none"
+                      ></p>
+                    </div>
                     <div class="zf-clearBoth"></div>
                   </li>
-                </div>
-                <!---------Description Ends Here---------->
-                <div class="main-f">
-                  <!---------Single Line Starts Here---------->
-                  <div class="col1">
-                    <li class="zf-tempFrmWrapper zf-small">
-                      <label class="zf-labelName"> License Number </label>
-                      <div class="zf-tempContDiv">
-                        <span>
-                          <input type="text" name="SingleLine2" checktype="c1" value="" maxlength="255" fieldType="1"
-                            placeholder="" /></span>
-                        <p id="SingleLine2_error" class="zf-errorMessage" style="display: none">
-                          Invalid value
-                        </p>
-                      </div>
+                  <!---------File Upload Ends Here---------->
+                  <!---------Section Starts Here---------->
+                  <li class="zf-tempFrmWrapper zf-section">
+                    <h2>State Tobacco License</h2>
+                    <p></p>
+                  </li>
+                  <!---------Section Ends Here---------->
+                  <!---------Description Starts Here---------->
+                  <div class="parag">
+                    <li class="zf-tempFrmWrapper zf-note">
+                      <label>
+                        <div class="parain">
+                          Retailers: Required in all states except AZ, AK, KY,
+                          MO, NC, OH, SC, SD, TN, UT, VA, WI, WY
+                        </div>
+                      </label>
+                      <div class="zf-clearBoth"></div>
+                    </li>
+                    <!---------Description Ends Here---------->
+                    <!---------Description Starts Here---------->
+                    <li class="zf-tempFrmWrapper zf-note">
+                      <label>
+                        <div class="parain">
+                          Wholesalers: Required in all states except DC MO
+                        </div>
+                      </label>
                       <div class="zf-clearBoth"></div>
                     </li>
                   </div>
-                  <!---------Single Line Ends Here---------->
-                  <!---------Date Starts Here---------->
-                  <div class="col2">
-                    <li class="zf-tempFrmWrapper">
-                      <div class="zf-tempContDiv">
-                        <label class="zf-labelName"> Expiration date </label>
-                        <input type="date" id="expirationDate" checktype="c4" maxlength="25" />
-                        <input name="Date" type="hidden" name="FormattedDate" id="formattedExpirationDate" />
-                        <!-- Span to display the formatted date -->
-
-                        <div class="zf-clearBoth"></div>
-                        <p id="Date_error" class="zf-errorMessage" style="display: none">
-                          Invalid value
-                        </p>
-                        <div class="zf-clearBoth"></div>
-                      </div>
-                    </li>
-                  </div>
-                  <!---------Date Ends Here---------->
-                </div>
-                <!--fileupload-->
-                <!---------File Upload Starts Here---------->
-                <li class="zf-tempFrmWrapper">
-                  <label class="zf-labelName">Resale/Sales Tax License</label>
-                  <div class="zf-tempContDiv">
-                    <label for="fileInput2" class="dropzone" id="dropzoneContainer2">
-                      <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                      <p>
-                        <strong>Drag & Drop</strong>
-                        <span>Browse for files</span>
-                      </p>
-                      <p class="subtext">
-                        Upload PDF, ZIP, doc, or Image (jpg, png, tif, gif, webp)
-                      </p>
-                    </label>
-                    <input type="file" name="FileUpload3" id="fileInput2" hidden />
-
-                    <div id="filePreview2" class="file-preview">
-                      <i class="fa-solid fa-file"></i>
-                      <p id="fileText2"></p>
-                      <i class="fa-solid fa-trash remove-file" id="removeFile2"></i>
-                    </div>
-
-                    <p id="FileUpload3_error" class="zf-errorMessage" style="display: none">
-                    </p>
-                  </div>
-                  <div class="zf-clearBoth"></div>
-                </li>
-                <!---------File Upload Ends Here---------->
-                <!---------Section Starts Here---------->
-                <li class="zf-tempFrmWrapper zf-section">
-                  <h2>State Tobacco License</h2>
-                  <p></p>
-                </li>
-                <!---------Section Ends Here---------->
-                <!---------Description Starts Here---------->
-                <div class="parag">
-                  <li class="zf-tempFrmWrapper zf-note">
-                    <label>
-                      <div class="parain">
-                        Retailers: Required in all states except AZ, AK, KY,
-                        MO, NC, OH, SC, SD, TN, UT, VA, WI, WY
-                      </div>
-                    </label>
-                    <div class="zf-clearBoth"></div>
-                  </li>
                   <!---------Description Ends Here---------->
-                  <!---------Description Starts Here---------->
-                  <li class="zf-tempFrmWrapper zf-note">
-                    <label>
-                      <div class="parain">
-                        Wholesalers: Required in all states except DC MO
+                  <div class="main-f">
+                    <!---------Single Line Starts Here---------->
+                    <div class="col1">
+                      <li class="zf-tempFrmWrapper zf-small">
+                        <label class="zf-labelName"> License Number </label>
+                        <div class="zf-tempContDiv">
+                          <span>
+                            <input
+                              type="text"
+                              name="SingleLine4"
+                              checktype="c1"
+                              value=""
+                              maxlength="255"
+                              fieldType="1"
+                              placeholder=""
+                          /></span>
+                          <p
+                            id="SingleLine4_error"
+                            class="zf-errorMessage"
+                            style="display: none"
+                          >
+                            Invalid value
+                          </p>
+                        </div>
+                        <div class="zf-clearBoth"></div>
+                      </li>
+                    </div>
+                    <!---------Single Line Ends Here---------->
+                    <!---------Date Starts Here---------->
+                    <div class="col2">
+                      <li class="zf-tempFrmWrapper">
+                        <div class="zf-tempContDiv">
+                          <label class="zf-labelName"> Expiration date </label>
+                          <input
+                            type="date"
+                            id="expirationDate1"
+                            checktype="c4"
+                            maxlength="25"
+                          />
+                          <input
+                            name="Date1"
+                            type="hidden"
+                            name="FormattedDate"
+                            id="formattedExpirationDate1"
+                          />
+                          <!-- Span to display the formatted date -->
+
+                          <div class="zf-clearBoth"></div>
+                          <p
+                            id="Date1_error"
+                            class="zf-errorMessage"
+                            style="display: none"
+                          >
+                            Invalid value
+                          </p>
+                          <div class="zf-clearBoth"></div>
+                        </div>
+                      </li>
+                    </div>
+                    <!---------Date Ends Here---------->
+                  </div>
+                  <!--fileupload-->
+                  <!---------File Upload Starts Here---------->
+                  <li class="zf-tempFrmWrapper">
+                    <label class="zf-labelName">State Tobacco License</label>
+                    <div class="zf-tempContDiv">
+                      <label
+                        for="fileInput1"
+                        class="dropzone"
+                        id="dropzoneContainer1"
+                      >
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        <p>
+                          <strong>Drag & Drop</strong>
+                          <span>Browse for files</span>
+                        </p>
+                        <p class="subtext">
+                          Upload PDF, ZIP, doc, or Image (jpg, png, tif, gif,
+                          webp)
+                        </p>
+                      </label>
+                      <input
+                        type="file"
+                        name="FileUpload2"
+                        id="fileInput1"
+                        hidden
+                      />
+
+                      <div id="filePreview1" class="file-preview">
+                        <i class="fa-solid fa-file"></i>
+                        <p id="fileText1"></p>
+                        <i
+                          class="fa-solid fa-trash remove-file"
+                          id="removeFile1"
+                        ></i>
                       </div>
-                    </label>
+
+                      <p
+                        id="FileUpload2_error"
+                        class="zf-errorMessage"
+                        style="display: none"
+                      ></p>
+                    </div>
                     <div class="zf-clearBoth"></div>
                   </li>
+                  <!---------File Upload Ends Here---------->
                 </div>
-                <!---------Description Ends Here---------->
-                <div class="main-f">
-                  <!---------Single Line Starts Here---------->
-                  <div class="col1">
-                    <li class="zf-tempFrmWrapper zf-small">
-                      <label class="zf-labelName"> License Number </label>
-                      <div class="zf-tempContDiv">
-                        <span>
-                          <input type="text" name="SingleLine4" checktype="c1" value="" maxlength="255" fieldType="1"
-                            placeholder="" /></span>
-                        <p id="SingleLine4_error" class="zf-errorMessage" style="display: none">
-                          Invalid value
-                        </p>
-                      </div>
-                      <div class="zf-clearBoth"></div>
-                    </li>
-                  </div>
-                  <!---------Single Line Ends Here---------->
-                  <!---------Date Starts Here---------->
-                  <div class="col2">
-                    <li class="zf-tempFrmWrapper">
-                      <div class="zf-tempContDiv">
-                        <label class="zf-labelName"> Expiration date </label>
-                        <input type="date" id="expirationDate1" checktype="c4" maxlength="25" />
-                        <input name="Date1" type="hidden" name="FormattedDate" id="formattedExpirationDate1" />
-                        <!-- Span to display the formatted date -->
-
-                        <div class="zf-clearBoth"></div>
-                        <p id="Date1_error" class="zf-errorMessage" style="display: none">
-                          Invalid value
-                        </p>
-                        <div class="zf-clearBoth"></div>
-                      </div>
-                    </li>
-                  </div>
-                  <!---------Date Ends Here---------->
+                <div class="bin">
+                  <input
+                    type="button"
+                    name="previous"
+                    class="previous action-button-previous"
+                    id="pre-sec"
+                    value="Previous"
+                  />
+                  <button class="zf-submitColor" id="submitBtn">Submit</button>
                 </div>
-                <!--fileupload-->
-                <!---------File Upload Starts Here---------->
-                <li class="zf-tempFrmWrapper">
-                  <label class="zf-labelName">State Tobacco License</label>
-                  <div class="zf-tempContDiv">
-                    <label for="fileInput1" class="dropzone" id="dropzoneContainer1">
-                      <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                      <p>
-                        <strong>Drag & Drop</strong>
-                        <span>Browse for files</span>
-                      </p>
-                      <p class="subtext">
-                        Upload PDF, ZIP, doc, or Image (jpg, png, tif, gif, webp)
-                      </p>
-                    </label>
-                    <input type="file" name="FileUpload2" id="fileInput1" hidden />
-
-                    <div id="filePreview1" class="file-preview">
-                      <i class="fa-solid fa-file"></i>
-                      <p id="fileText1"></p>
-                      <i class="fa-solid fa-trash remove-file" id="removeFile1"></i>
-                    </div>
-
-                    <p id="FileUpload2_error" class="zf-errorMessage" style="display: none">
-                    </p>
-                  </div>
-                  <div class="zf-clearBoth"></div>
-                </li>
-                <!---------File Upload Ends Here---------->
-              </div>
-              <div class="bin">
-                <input type="button" name="previous" class="previous action-button-previous" id="pre-sec"
-                  value="Previous" />
-                <button class="zf-submitColor" id="submitBtn">Submit</button>
-              </div>
-            </fieldset>
-          </ul>
+              </fieldset>
+            </ul>
+          </div>
+          <!---------template Container Starts Here---------->
         </div>
-        <!---------template Container Starts Here---------->
-      </div>
-      <!-- 'zf-templateWrapper' ends -->
-    </form>
-  </div>
-  <!-- 'zf-templateWidth' ends -->
-  <script type="text/javascript">
-    var zf_DateRegex = new RegExp(
-      "^(([0][1-9])|([1-2][0-9])|([3][0-1]))[-](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$"
-    );
-    var zf_MonthYearRegex = new RegExp(
-      "^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$"
-    );
+        <!-- 'zf-templateWrapper' ends -->
+      </form>
+    </div>
+    <!-- 'zf-templateWidth' ends -->
+    <script type="text/javascript">
+      var zf_DateRegex = new RegExp(
+        "^(([0][1-9])|([1-2][0-9])|([3][0-1]))[-](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$",
+      );
+      var zf_MonthYearRegex = new RegExp(
+        "^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$",
+      );
 
-    var zf_MandArray = [
-      "Name_First",
-      "Name_Last",
-      "PhoneNumber1_countrycode",
-      "PhoneNumber_countrycode",
-      "SingleLine",
-      "Dropdown",
-    ];
+      var zf_MandArray = [
+        "Name_First",
+        "Name_Last",
+        "PhoneNumber1_countrycode",
+        "PhoneNumber_countrycode",
+        "SingleLine",
+        "Dropdown",
+        "Dropdown9",
+      ];
 
-    var zf_MandArray1 = [
-      "Dropdown2",
-      "Dropdown5",
-      "Address_AddressLine1",
-      "Address_City",
-      "Address_Region",
-      "Address_ZipCode",
-    ];
+      var zf_MandArray1 = [
+        "Dropdown2",
+        "Dropdown5",
+        "Address_AddressLine1",
+        "Address_City",
+        "Address_Region",
+        "Address_ZipCode",
+      ];
 
-    var zf_MandArray2 = [
-      "Dropdown7",
-      "Dropdown8",
-      "Address1_AddressLine1",
-      "Address1_AddressLine2",
-      "Address1_City",
-      "Address1_Region",
-      "Address1_ZipCode",
-    ];
+      var zf_MandArray2 = [
+        "Dropdown7",
+        "Dropdown8",
+        "Address1_AddressLine1",
+        "Address1_AddressLine2",
+        "Address1_City",
+        "Address1_Region",
+        "Address1_ZipCode",
+      ];
 
-    var zf_FieldArray = [
-      "Name_First",
-      "Name_Last",
-      "Email",
-      "PhoneNumber1_countrycode",
-      "PhoneNumber_countrycode",
-      "SingleLine",
-      "Dropdown",
-      "DecisionBox1",
-      "Dropdown2",
-      "Dropdown5",
-      "Address_AddressLine1",
-      "Address_AddressLine2",
-      "Address_City",
-      "Address_Region",
-      "Address_ZipCode",
-      "DecisionBox3",
-      "Dropdown7",
-      "Dropdown8",
-      "Dropdown9",
-      "Address1_AddressLine1",
-      "Address1_AddressLine2",
-      "Address1_City",
-      "Address1_Region",
-      "Address1_ZipCode",
-      "SingleLine1",
-      "SingleLine2",
-      "Date",
-      "FileUpload3",
-      "SingleLine4",
-      "Date1",
-      "FileUpload2",
-    ];
-    var isSalesIQIntegrationEnabled = false;
-    var salesIQFieldsArray = [];
-  </script>
-  <script>
-    $("#DecisionBox3").change(function () {
-      $("#addressType").toggle(!this.checked);
-    });
-
-    window.onload = function () {
-      document.getElementById("DecisionBox3").checked = true;
-      $("#addressType").hide();
-    };
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      let today = new Date();
-      today.setDate(today.getDate() + 1);
-      let tomorrow = today.toISOString().split("T")[0];
-      document.getElementById("expirationDate").setAttribute("min", tomorrow);
-      document.getElementById("expirationDate1").setAttribute("min", tomorrow);
-    });
-  </script>
-  <script src="js/countries-states.js"></script>
-  <script>
-    document
-      .getElementById("expirationDate")
-      .addEventListener("change", function () {
-        let inputDate = this.value;
-        if (inputDate) {
-          let dateObj = new Date(inputDate);
-          let month = (dateObj.getMonth() + 1).toString().padStart(2, "0");
-          let day = dateObj.getDate().toString().padStart(2, "0");
-          let year = dateObj.getFullYear();
-          let formattedText = `${month}/${day}/${year}`;
-          console.log(formattedText);
-          document.getElementById("formattedExpirationDate").value =
-            formattedText;
-        }
+      var zf_FieldArray = [
+        "Name_First",
+        "Name_Last",
+        "Email",
+        "PhoneNumber1_countrycode",
+        "PhoneNumber_countrycode",
+        "SingleLine",
+        "Dropdown",
+        "DecisionBox1",
+        "Dropdown2",
+        "Dropdown5",
+        "Address_AddressLine1",
+        "Address_AddressLine2",
+        "Address_City",
+        "Address_Region",
+        "Address_ZipCode",
+        "DecisionBox3",
+        "Dropdown7",
+        "Dropdown8",
+        "Dropdown9",
+        "Address1_AddressLine1",
+        "Address1_AddressLine2",
+        "Address1_City",
+        "Address1_Region",
+        "Address1_ZipCode",
+        "SingleLine1",
+        "SingleLine2",
+        "Date",
+        "FileUpload3",
+        "SingleLine4",
+        "Date1",
+        "FileUpload2",
+      ];
+      var isSalesIQIntegrationEnabled = false;
+      var salesIQFieldsArray = [];
+    </script>
+    <script>
+      $("#DecisionBox3").change(function () {
+        $("#addressType").toggle(!this.checked);
       });
-    document
-      .getElementById("expirationDate1")
-      .addEventListener("change", function () {
-        let inputDate = this.value;
-        if (inputDate) {
-          let dateObj = new Date(inputDate);
-          let month = (dateObj.getMonth() + 1).toString().padStart(2, "0");
-          let day = dateObj.getDate().toString().padStart(2, "0");
-          let year = dateObj.getFullYear();
-          let formattedText = `${month}/${day}/${year}`;
-          console.log(formattedText);
-          document.getElementById("formattedExpirationDate1").value =
-            formattedText;
-        }
+
+      window.onload = function () {
+        document.getElementById("DecisionBox3").checked = true;
+        $("#addressType").hide();
+      };
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let today = new Date();
+        today.setDate(today.getDate() + 1);
+        let tomorrow = today.toISOString().split("T")[0];
+        document.getElementById("expirationDate").setAttribute("min", tomorrow);
+        document
+          .getElementById("expirationDate1")
+          .setAttribute("min", tomorrow);
       });
-  </script>
-  <script>
-    const dropdownList = $(".dropdown-list");
+    </script>
+    <script src="js/countries-states.js"></script>
+    <script>
+      document
+        .getElementById("expirationDate")
+        .addEventListener("change", function () {
+          let inputDate = this.value;
+          if (inputDate) {
+            let dateObj = new Date(inputDate);
+            let month = (dateObj.getMonth() + 1).toString().padStart(2, "0");
+            let day = dateObj.getDate().toString().padStart(2, "0");
+            let year = dateObj.getFullYear();
+            let formattedText = `${month}/${day}/${year}`;
+            console.log(formattedText);
+            document.getElementById("formattedExpirationDate").value =
+              formattedText;
+          }
+        });
+      document
+        .getElementById("expirationDate1")
+        .addEventListener("change", function () {
+          let inputDate = this.value;
+          if (inputDate) {
+            let dateObj = new Date(inputDate);
+            let month = (dateObj.getMonth() + 1).toString().padStart(2, "0");
+            let day = dateObj.getDate().toString().padStart(2, "0");
+            let year = dateObj.getFullYear();
+            let formattedText = `${month}/${day}/${year}`;
+            console.log(formattedText);
+            document.getElementById("formattedExpirationDate1").value =
+              formattedText;
+          }
+        });
+    </script>
+    <script>
+      const dropdownList = $(".dropdown-list");
 
-    function fetchData(query, callback) {
-      $.get(query, callback);
-    }
+      function fetchData(query, callback) {
+        $.get(query, callback);
+      }
 
-    // Function to handle the search input
-    function searchDropdown() {
-      var country = $(".dropdown-countries").find(":selected").text();
-      var country_val = $("#countryF1").find(":selected").val();
-      if (country_val == "USA") {
-        var city = $(".Address_City").val();
-        var zipCode = $(".Address_ZipCode").val();
-        var inputLength = $("#searchInput").val().length;
-        if (inputLength > 0) {
-          const query = `https://api.addressy.com/Capture/Interactive/Find/v1.10/json3.ws?Key=TY78-BD75-NW81-XE97&Countries=US&Limit=20&Text=${$(
-            "#searchInput"
-          ).val()}`;
+      // Function to handle the search input
+      function searchDropdown() {
+        var country = $(".dropdown-countries").find(":selected").text();
+        var country_val = $("#countryF1").find(":selected").val();
+        if (country_val == "USA") {
+          var city = $(".Address_City").val();
+          var zipCode = $(".Address_ZipCode").val();
+          var inputLength = $("#searchInput").val().length;
+          if (inputLength > 0) {
+            const query = `https://api.addressy.com/Capture/Interactive/Find/v1.10/json3.ws?Key=TY78-BD75-NW81-XE97&Countries=US&Limit=20&Text=${$(
+              "#searchInput",
+            ).val()}`;
 
-          // Call the API to get data based on the search query
-          fetchData(query, (data) => {
-            const filteredOptions = data.Items;
+            // Call the API to get data based on the search query
+            fetchData(query, (data) => {
+              const filteredOptions = data.Items;
+              dropdownList.empty();
+              filteredOptions.forEach((option) => {
+                if (
+                  option.Type === "Container" ||
+                  option.Type === "Street" ||
+                  option.Type === "Locality" ||
+                  option.Type === "BuildingNumber"
+                ) {
+                  dropdownList.append(
+                    `<div class="dropdown-item"> ${option.Text} <span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div>`,
+                  );
+                } else {
+                  dropdownList.append(
+                    `<div class="dropdown-item" id="${option.Id}" onclick="getAddressDetail(event, this);"> ${option.Text}</div>`,
+                  );
+                }
+              });
+            });
+          } else {
             dropdownList.empty();
-            filteredOptions.forEach((option) => {
-              if (option.Type === "Container" || option.Type === "Street" || option.Type === "Locality" || option.Type === "BuildingNumber") {
-                dropdownList.append(
-                  `<div class="dropdown-item"> ${option.Text} <span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div>`
-                );
-              } else {
-                dropdownList.append(
-                  `<div class="dropdown-item" id="${option.Id}" onclick="getAddressDetail(event, this);"> ${option.Text}</div>`
-                );
-              }
-            });
-          });
+          }
         } else {
           dropdownList.empty();
         }
-      } else {
-        dropdownList.empty();
       }
-    }
 
-    function callback(e, thisObj) {
-      let id = thisObj.id;
-      const query = `https://api.addressy.com/Capture/Interactive/Find/v1.10/json3.ws?Key=TY78-BD75-NW81-XE97&Countries=US&Limit=20&Container=${id}`;
-      fetchData(query, (data) => {
-        const filteredOptions = data.Items;
-        dropdownList.empty();
-        dropdownList.css({ "max-height": "300px", "overflow-y": "auto" });
-
-        filteredOptions.forEach((option) => {
-          if (option.Type === "Container") {
-            dropdownList.append(
-              `<div class="dropdown-item"> ${option.Text} <span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div>`
-            );
-          } else if (option.Type === "Street") {
-            dropdownList.append(
-              `<div class="dropdown-item" id="Street, ${option.Text}" onclick="getAddressDetail(event, this);"> ${option.Text}  <span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div></div>`
-            );
-          } else if (option.Type === "Locality") {
-            dropdownList.append(
-              `<div class="dropdown-item" id="Locality, ${option.Text}" onclick="getAddressDetail(event, this);"> ${option.Text}  <span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div></div>`
-            );
-          } else if (option.Type === "BuildingNumber") {
-            dropdownList.append(
-              `<div class="dropdown-item" id="BuildingNumber, ${option.Text}" onclick="getAddressDetail(event, this);"> ${option.Text}  <span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div></div>`
-            );
-          } else {
-            dropdownList.append(
-              `<div class="dropdown-item" id="${option.Id}" onclick="getAddressDetail(event, this);"> ${option.Text} </div>`
-            );
-          }
-        });
-      });
-    }
-    var input = document.querySelector("#international_PhoneNumber_countrycode");
-    input.addEventListener("input", function () {
-      if (!input.value.startsWith("+")) {
-        input.value = "+" + input.value.replace(/[^0-9]/g, '');
-      }
-    });
-    function getAddressDetail(e, thisObj) {
-      let id = thisObj.id;
-      const query = `https://api.addressy.com/Capture/Interactive/Retrieve/v1.2/json3.ws?Key=TY78-BD75-NW81-XE97&Id=${id}`;
-      fetchData(query, (data) => {
-        console.log(data)
-        const filteredOptions = data.Items;
-        filteredOptions.forEach((option) => {
-          $("#searchInput").val(option.Street)
-          $("#cityV1").val(option.City)
-          $("#stateLabel").val(option.ProvinceCode)
-          $(".state-dropdown").val(option.ProvinceCode).change();
-          $("#postalCode").val(option.PostalCode)
-          $("#suite_unit_apt_box_v1").val(option.SubBuilding)
+      function callback(e, thisObj) {
+        let id = thisObj.id;
+        const query = `https://api.addressy.com/Capture/Interactive/Find/v1.10/json3.ws?Key=TY78-BD75-NW81-XE97&Countries=US&Limit=20&Container=${id}`;
+        fetchData(query, (data) => {
+          const filteredOptions = data.Items;
           dropdownList.empty();
+          dropdownList.css({ "max-height": "300px", "overflow-y": "auto" });
+
+          filteredOptions.forEach((option) => {
+            if (option.Type === "Container") {
+              dropdownList.append(
+                `<div class="dropdown-item"> ${option.Text} <span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div>`,
+              );
+            } else if (option.Type === "Street") {
+              dropdownList.append(
+                `<div class="dropdown-item" id="Street, ${option.Text}" onclick="getAddressDetail(event, this);"> ${option.Text}  <span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div></div>`,
+              );
+            } else if (option.Type === "Locality") {
+              dropdownList.append(
+                `<div class="dropdown-item" id="Locality, ${option.Text}" onclick="getAddressDetail(event, this);"> ${option.Text}  <span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div></div>`,
+              );
+            } else if (option.Type === "BuildingNumber") {
+              dropdownList.append(
+                `<div class="dropdown-item" id="BuildingNumber, ${option.Text}" onclick="getAddressDetail(event, this);"> ${option.Text}  <span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div></div>`,
+              );
+            } else {
+              dropdownList.append(
+                `<div class="dropdown-item" id="${option.Id}" onclick="getAddressDetail(event, this);"> ${option.Text} </div>`,
+              );
+            }
+          });
         });
+      }
+      var input = document.querySelector(
+        "#international_PhoneNumber_countrycode",
+      );
+      input.addEventListener("input", function () {
+        if (!input.value.startsWith("+")) {
+          input.value = "+" + input.value.replace(/[^0-9]/g, "");
+        }
       });
-    }
+      function getAddressDetail(e, thisObj) {
+        let id = thisObj.id;
+        const query = `https://api.addressy.com/Capture/Interactive/Retrieve/v1.2/json3.ws?Key=TY78-BD75-NW81-XE97&Id=${id}`;
+        fetchData(query, (data) => {
+          console.log(data);
+          const filteredOptions = data.Items;
+          filteredOptions.forEach((option) => {
+            $("#searchInput").val(option.Street);
+            $("#cityV1").val(option.City);
+            $("#stateLabel").val(option.ProvinceCode);
+            $(".state-dropdown").val(option.ProvinceCode).change();
+            $("#postalCode").val(option.PostalCode);
+            $("#suite_unit_apt_box_v1").val(option.SubBuilding);
+            dropdownList.empty();
+          });
+        });
+      }
 
-    const dropdownListSameAsBilling = $(".dropdown-list-SameASBilling");
-    function searchDropdownSameAsBilling() {
-      var country_val = $("#countryF2").find(":selected").val();
-      if (country_val == "USA") {
-        var inputLength = $("#searchAddress2").val().length;
-        if (inputLength > 0) {
-          const query = `https://api.addressy.com/Capture/Interactive/Find/v1.10/json3.ws?Key=TY78-BD75-NW81-XE97&Countries=US&Limit=20&Text=${$(
-            "#searchAddress2"
-          ).val()}`;
+      const dropdownListSameAsBilling = $(".dropdown-list-SameASBilling");
+      function searchDropdownSameAsBilling() {
+        var country_val = $("#countryF2").find(":selected").val();
+        if (country_val == "USA") {
+          var inputLength = $("#searchAddress2").val().length;
+          if (inputLength > 0) {
+            const query = `https://api.addressy.com/Capture/Interactive/Find/v1.10/json3.ws?Key=TY78-BD75-NW81-XE97&Countries=US&Limit=20&Text=${$(
+              "#searchAddress2",
+            ).val()}`;
 
-          // Call the API to get data based on the search query
-          fetchData(query, (data) => {
-            const filteredOptions = data.Items;
+            // Call the API to get data based on the search query
+            fetchData(query, (data) => {
+              const filteredOptions = data.Items;
+              dropdownListSameAsBilling.empty();
+              filteredOptions.forEach((option) => {
+                if (
+                  option.Type === "Container" ||
+                  option.Type === "Street" ||
+                  option.Type === "Locality" ||
+                  option.Type === "BuildingNumber"
+                ) {
+                  dropdownListSameAsBilling.append(
+                    `<div class="dropdown-item-SameASBilling"> ${option.Text} <span id="${option.Id}" onclick="callbackSameAsBilling(event, this);">see all ${option.Description}</span></div>`,
+                  );
+                } else {
+                  dropdownListSameAsBilling.append(
+                    `<div class="dropdown-item-SameASBilling" id="${option.Id}" onclick="getAddressDetailSameAsBilling(event, this);"> ${option.Text}</div>`,
+                  );
+                }
+              });
+            });
+          } else {
             dropdownListSameAsBilling.empty();
-            filteredOptions.forEach((option) => {
-              if (option.Type === "Container" || option.Type === "Street" || option.Type === "Locality" || option.Type === "BuildingNumber") {
-                dropdownListSameAsBilling.append(
-                  `<div class="dropdown-item-SameASBilling"> ${option.Text} <span id="${option.Id}" onclick="callbackSameAsBilling(event, this);">see all ${option.Description}</span></div>`
-                );
-              } else {
-                dropdownListSameAsBilling.append(
-                  `<div class="dropdown-item-SameASBilling" id="${option.Id}" onclick="getAddressDetailSameAsBilling(event, this);"> ${option.Text}</div>`
-                );
-              }
-            });
-          });
+          }
         } else {
           dropdownListSameAsBilling.empty();
         }
-      } else {
-        dropdownListSameAsBilling.empty();
       }
-    }
 
-    function callbackSameAsBilling(e, thisObj) {
-      let id = thisObj.id;
-      const query = `https://api.addressy.com/Capture/Interactive/Find/v1.10/json3.ws?Key=TY78-BD75-NW81-XE97&Countries=US&Limit=20&Container=${id}`;
-      fetchData(query, (data) => {
-        const filteredOptions = data.Items;
-        dropdownListSameAsBilling.empty();
-        dropdownListSameAsBilling.css({ "max-height": "300px", "overflow-y": "auto" });
+      function callbackSameAsBilling(e, thisObj) {
+        let id = thisObj.id;
+        const query = `https://api.addressy.com/Capture/Interactive/Find/v1.10/json3.ws?Key=TY78-BD75-NW81-XE97&Countries=US&Limit=20&Container=${id}`;
+        fetchData(query, (data) => {
+          const filteredOptions = data.Items;
+          dropdownListSameAsBilling.empty();
+          dropdownListSameAsBilling.css({
+            "max-height": "300px",
+            "overflow-y": "auto",
+          });
 
-        filteredOptions.forEach((option) => {
-          if (option.Type === "Container") {
-            dropdownListSameAsBilling.append(
-              `<div class="dropdown-item-SameASBilling"> ${option.Text} <span id="${option.Id}" onclick="callbackSameAsBilling(event, this);">see all ${option.Description}</span></div>`
-            );
-          } else if (option.Type === "Street") {
-            dropdownListSameAsBilling.append(
-              `<div class="dropdown-item-SameASBilling" id="Street, ${option.Text}" onclick="getAddressDetailSameAsBilling(event, this);"> ${option.Text}  <span id="${option.Id}" onclick="callbackSameAsBilling(event, this);">see all ${option.Description}</span></div></div>`
-            );
-          } else if (option.Type === "Locality") {
-            dropdownListSameAsBilling.append(
-              `<div class="dropdown-item-SameASBilling" id="Locality, ${option.Text}" onclick="getAddressDetailSameAsBilling(event, this);"> ${option.Text}  <span id="${option.Id}" onclick="callbackSameAsBilling(event, this);">see all ${option.Description}</span></div></div>`
-            );
-          } else if (option.Type === "BuildingNumber") {
-            dropdownListSameAsBilling.append(
-              `<div class="dropdown-item-SameASBilling" id="BuildingNumber, ${option.Text}" onclick="getAddressDetailSameAsBilling(event, this);"> ${option.Text}  <span id="${option.Id}" onclick="callbackSameAsBilling(event, this);">see all ${option.Description}</span></div></div>`
-            );
-          } else {
-            dropdownListSameAsBilling.append(
-              `<div class="dropdown-item-SameASBilling" id="${option.Id}" onclick="getAddressDetailSameAsBilling(event, this);"> ${option.Text} </div>`
-            );
+          filteredOptions.forEach((option) => {
+            if (option.Type === "Container") {
+              dropdownListSameAsBilling.append(
+                `<div class="dropdown-item-SameASBilling"> ${option.Text} <span id="${option.Id}" onclick="callbackSameAsBilling(event, this);">see all ${option.Description}</span></div>`,
+              );
+            } else if (option.Type === "Street") {
+              dropdownListSameAsBilling.append(
+                `<div class="dropdown-item-SameASBilling" id="Street, ${option.Text}" onclick="getAddressDetailSameAsBilling(event, this);"> ${option.Text}  <span id="${option.Id}" onclick="callbackSameAsBilling(event, this);">see all ${option.Description}</span></div></div>`,
+              );
+            } else if (option.Type === "Locality") {
+              dropdownListSameAsBilling.append(
+                `<div class="dropdown-item-SameASBilling" id="Locality, ${option.Text}" onclick="getAddressDetailSameAsBilling(event, this);"> ${option.Text}  <span id="${option.Id}" onclick="callbackSameAsBilling(event, this);">see all ${option.Description}</span></div></div>`,
+              );
+            } else if (option.Type === "BuildingNumber") {
+              dropdownListSameAsBilling.append(
+                `<div class="dropdown-item-SameASBilling" id="BuildingNumber, ${option.Text}" onclick="getAddressDetailSameAsBilling(event, this);"> ${option.Text}  <span id="${option.Id}" onclick="callbackSameAsBilling(event, this);">see all ${option.Description}</span></div></div>`,
+              );
+            } else {
+              dropdownListSameAsBilling.append(
+                `<div class="dropdown-item-SameASBilling" id="${option.Id}" onclick="getAddressDetailSameAsBilling(event, this);"> ${option.Text} </div>`,
+              );
+            }
+          });
+        });
+      }
+      var inputbill = document.querySelector(
+        "#international_PhoneNumber1_countrycode",
+      );
+      inputbill.addEventListener("input", function () {
+        if (!inputbill.value.startsWith("+")) {
+          inputbill.value = "+" + inputbill.value.replace(/[^0-9]/g, "");
+        }
+      });
+      function getAddressDetailSameAsBilling(e, thisObj) {
+        let id = thisObj.id;
+        const query = `https://api.addressy.com/Capture/Interactive/Retrieve/v1.2/json3.ws?Key=TY78-BD75-NW81-XE97&Id=${id}`;
+        fetchData(query, (data) => {
+          const filteredOptions = data.Items;
+          filteredOptions.forEach((option) => {
+            $("#searchAddress2").val(option.Street);
+            $("#cityV2").val(option.City);
+            $("#stateLabelV2").val(option.ProvinceCode);
+            $(".state-dropdown-v2").val(option.ProvinceCode).change();
+            $("#postalCodeV2").val(option.PostalCode);
+            $("#suite_unit_apt_box_v2").val(option.SubBuilding);
+            dropdownListSameAsBilling.empty();
+          });
+        });
+      }
+
+      var input1 = document.querySelector(
+        "#international_PhoneNumber_countrycode",
+      );
+      var input2 = document.querySelector(
+        "#international_PhoneNumber1_countrycode",
+      );
+
+      var iti1 = window.intlTelInput(input1, {
+        separateDialCode: false,
+        preferredCountries: ["US"],
+        allowDropdown: true,
+        hiddenInput: "full",
+        utilsScript:
+          "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js",
+        onlyCountries: [
+          "AX",
+          "AS",
+          "AD",
+          "AI",
+          "AR",
+          "AM",
+          "AW",
+          "AT",
+          "BS",
+          "BH",
+          "BD",
+          "BB",
+          "BE",
+          "BZ",
+          "BM",
+          "BO",
+          "BA",
+          "BR",
+          "IO",
+          "VG",
+          "BG",
+          "KH",
+          "CA",
+          "KY",
+          "CL",
+          "CN",
+          "CX",
+          "CC",
+          "CO",
+          "CK",
+          "CR",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "DM",
+          "DO",
+          "EC",
+          "SV",
+          "EE",
+          "FK",
+          "FO",
+          "FJ",
+          "FI",
+          "GE",
+          "DE",
+          "GI",
+          "GR",
+          "GL",
+          "GD",
+          "GP",
+          "GU",
+          "GT",
+          "GG",
+          "HM",
+          "HN",
+          "HK",
+          "HU",
+          "IS",
+          "IN",
+          "ID",
+          "IQ",
+          "IE",
+          "IM",
+          "IT",
+          "JM",
+          "JP",
+          "JE",
+          "JO",
+          "KZ",
+          "KI",
+          "KW",
+          "KG",
+          "LV",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "MO",
+          "MY",
+          "MV",
+          "MT",
+          "MH",
+          "MQ",
+          "YT",
+          "MX",
+          "FM",
+          "MD",
+          "MC",
+          "MN",
+          "ME",
+          "MS",
+          "NR",
+          "NP",
+          "NL",
+          "NC",
+          "NI",
+          "NU",
+          "NF",
+          "MK",
+          "MP",
+          "NO",
+          "OM",
+          "PW",
+          "PA",
+          "PG",
+          "PY",
+          "PE",
+          "PH",
+          "PN",
+          "PL",
+          "PT",
+          "QA",
+          "SM",
+          "SA",
+          "RS",
+          "SG",
+          "SK",
+          "SI",
+          "SB",
+          "ZA",
+          "GS",
+          "KR",
+          "ES",
+          "LK",
+          "BL",
+          "SH",
+          "KN",
+          "LC",
+          "MF",
+          "PM",
+          "VC",
+          "SJ",
+          "SE",
+          "CH",
+          "TW",
+          "TJ",
+          "TH",
+          "TO",
+          "TT",
+          "TR",
+          "TC",
+          "UM",
+          "VI",
+          "UA",
+          "AE",
+          "GB",
+          "US",
+          "UY",
+          "UZ",
+          "VA",
+          "VE",
+          "VN",
+          "WF",
+          "EH",
+        ],
+      });
+
+      var iti2 = window.intlTelInput(input2, {
+        separateDialCode: false,
+        preferredCountries: ["US"],
+        allowDropdown: true,
+        hiddenInput: "full",
+        utilsScript:
+          "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js",
+        onlyCountries: [
+          "AX",
+          "AS",
+          "AD",
+          "AI",
+          "AR",
+          "AM",
+          "AW",
+          "AT",
+          "BS",
+          "BH",
+          "BD",
+          "BB",
+          "BE",
+          "BZ",
+          "BM",
+          "BO",
+          "BA",
+          "BR",
+          "IO",
+          "VG",
+          "BG",
+          "KH",
+          "CA",
+          "KY",
+          "CL",
+          "CN",
+          "CX",
+          "CC",
+          "CO",
+          "CK",
+          "CR",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "DM",
+          "DO",
+          "EC",
+          "SV",
+          "EE",
+          "FK",
+          "FO",
+          "FJ",
+          "FI",
+          "GE",
+          "DE",
+          "GI",
+          "GR",
+          "GL",
+          "GD",
+          "GP",
+          "GU",
+          "GT",
+          "GG",
+          "HM",
+          "HN",
+          "HK",
+          "HU",
+          "IS",
+          "IN",
+          "ID",
+          "IQ",
+          "IE",
+          "IM",
+          "IT",
+          "JM",
+          "JP",
+          "JE",
+          "JO",
+          "KZ",
+          "KI",
+          "KW",
+          "KG",
+          "LV",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "MO",
+          "MY",
+          "MV",
+          "MT",
+          "MH",
+          "MQ",
+          "YT",
+          "MX",
+          "FM",
+          "MD",
+          "MC",
+          "MN",
+          "ME",
+          "MS",
+          "NR",
+          "NP",
+          "NL",
+          "NC",
+          "NI",
+          "NU",
+          "NF",
+          "MK",
+          "MP",
+          "NO",
+          "OM",
+          "PW",
+          "PA",
+          "PG",
+          "PY",
+          "PE",
+          "PH",
+          "PN",
+          "PL",
+          "PT",
+          "QA",
+          "SM",
+          "SA",
+          "RS",
+          "SG",
+          "SK",
+          "SI",
+          "SB",
+          "ZA",
+          "GS",
+          "KR",
+          "ES",
+          "LK",
+          "BL",
+          "SH",
+          "KN",
+          "LC",
+          "MF",
+          "PM",
+          "VC",
+          "SJ",
+          "SE",
+          "CH",
+          "TW",
+          "TJ",
+          "TH",
+          "TO",
+          "TT",
+          "TR",
+          "TC",
+          "UM",
+          "VI",
+          "UA",
+          "AE",
+          "GB",
+          "US",
+          "UY",
+          "UZ",
+          "VA",
+          "VE",
+          "VN",
+          "WF",
+          "EH",
+        ],
+      });
+
+      function setInitialPhoneNumber(input, itiInstance) {
+        var countryData = itiInstance.getSelectedCountryData();
+        input.value = `+${countryData.dialCode} `;
+      }
+
+      setTimeout(function () {
+        setInitialPhoneNumber(input1, iti1);
+        setInitialPhoneNumber(input2, iti2);
+      }, 100);
+
+      input1.addEventListener("countrychange", function () {
+        setInitialPhoneNumber(input1, iti1);
+      });
+
+      input2.addEventListener("countrychange", function () {
+        setInitialPhoneNumber(input2, iti2);
+      });
+
+      document
+        .querySelector("#international_PhoneNumber_countrycode")
+        .addEventListener("countrychange", function () {
+          var countySel = document.querySelector(".dropdown-countries");
+          var countryData = iti1.getSelectedCountryData();
+          var countryName = countryData.name;
+          var iso2 = countryData.iso2.toUpperCase();
+          var iso3 = convert_ISO_3166_2_to_1[iso2] || "N/A";
+          countySel.value = iso3;
+          var event = new Event("change");
+          countySel.dispatchEvent(event);
+        });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          zf_ValidateAndSubmit();
+        }
+      });
+    </script>
+    <script>
+      function setInitialPhoneNumber(input, itiInstance) {
+        var countryData = itiInstance.getSelectedCountryData();
+        input.value = `+${countryData.dialCode} `;
+      }
+    </script>
+    <!-- file upload -->
+    <script>
+      function setupFileUpload(
+        inputId,
+        previewId,
+        textId,
+        removeId,
+        dropzoneId,
+        errorId,
+      ) {
+        let fileInput = document.getElementById(inputId);
+        let filePreview = document.getElementById(previewId);
+        let fileText = document.getElementById(textId);
+        let removeFile = document.getElementById(removeId);
+        let dropzone = document.getElementById(dropzoneId);
+        let errorMessage = document.getElementById(errorId);
+
+        fileInput.addEventListener("change", function () {
+          if (this.files.length > 0) {
+            fileText.textContent = this.files[0].name;
+            filePreview.style.display = "flex";
+            dropzone.style.display = "none";
+            errorMessage.style.display = "none";
+          }
+        });
+
+        removeFile.addEventListener("click", function () {
+          fileInput.value = "";
+          fileText.textContent = "";
+          filePreview.style.display = "none";
+          dropzone.style.display = "block";
+          errorMessage.style.display = "block";
+        });
+      }
+
+      setupFileUpload(
+        "fileInput1",
+        "filePreview1",
+        "fileText1",
+        "removeFile1",
+        "dropzoneContainer1",
+        "FileUpload2_error",
+      );
+      setupFileUpload(
+        "fileInput2",
+        "filePreview2",
+        "fileText2",
+        "removeFile2",
+        "dropzoneContainer2",
+        "FileUpload3_error",
+      );
+    </script>
+    <!-- close the loqate dropdown -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const input = document.getElementById("searchInput");
+        document.addEventListener("click", function (event) {
+          const loqateDropdown = document.querySelector(".dropdown-list");
+          if (
+            !input.contains(event.target) &&
+            loqateDropdown &&
+            !loqateDropdown.contains(event.target)
+          ) {
+            loqateDropdown.style.display = "none";
+          }
+        });
+        input.addEventListener("input", function () {
+          const loqateDropdown = document.querySelector(".dropdown-list");
+          if (loqateDropdown) {
+            loqateDropdown.style.display = "block";
           }
         });
       });
-    }
-    var inputbill = document.querySelector("#international_PhoneNumber1_countrycode");
-    inputbill.addEventListener("input", function () {
-      if (!inputbill.value.startsWith("+")) {
-        inputbill.value = "+" + inputbill.value.replace(/[^0-9]/g, '');
-      }
-    });
-    function getAddressDetailSameAsBilling(e, thisObj) {
-      let id = thisObj.id;
-      const query = `https://api.addressy.com/Capture/Interactive/Retrieve/v1.2/json3.ws?Key=TY78-BD75-NW81-XE97&Id=${id}`;
-      fetchData(query, (data) => {
-        const filteredOptions = data.Items;
-        filteredOptions.forEach((option) => {
-          $("#searchAddress2").val(option.Street)
-          $("#cityV2").val(option.City)
-          $("#stateLabelV2").val(option.ProvinceCode)
-          $(".state-dropdown-v2").val(option.ProvinceCode).change();
-          $("#postalCodeV2").val(option.PostalCode)
-          $("#suite_unit_apt_box_v2").val(option.SubBuilding)
-          dropdownListSameAsBilling.empty();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const input = document.getElementById("searchAddress2");
+        document.addEventListener("click", function (event) {
+          const loqateDropdown = document.querySelector(
+            ".dropdown-list-SameASBilling",
+          );
+          if (
+            !input.contains(event.target) &&
+            loqateDropdown &&
+            !loqateDropdown.contains(event.target)
+          ) {
+            loqateDropdown.style.display = "none";
+          }
+        });
+        input.addEventListener("input", function () {
+          const loqateDropdown = document.querySelector(
+            ".dropdown-list-SameASBilling",
+          );
+          if (loqateDropdown) {
+            loqateDropdown.style.display = "block";
+          }
         });
       });
-    }
+    </script>
+    <!-- Dynamic Height for Ifram -->
+    <script>
+      function updateHeight() {
+        requestAnimationFrame(() => {
+          let formContainer = document.querySelector("#form");
+          if (formContainer) {
+            formContainer.style.display = "block";
+            void formContainer.offsetHeight;
 
-
-    var input1 = document.querySelector("#international_PhoneNumber_countrycode");
-    var input2 = document.querySelector("#international_PhoneNumber1_countrycode");
-
-    var iti1 = window.intlTelInput(input1, {
-      separateDialCode: false,
-      preferredCountries: ["US"],
-      allowDropdown: true,
-      hiddenInput: "full",
-      utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js",
-      onlyCountries: [
-        "AX", "AS", "AD", "AI", "AR", "AM", "AW", "AT", "BS", "BH", "BD", "BB",
-        "BE", "BZ", "BM", "BO", "BA", "BR", "IO", "VG", "BG", "KH", "CA", "KY",
-        "CL", "CN", "CX", "CC", "CO", "CK", "CR", "HR", "CY", "CZ", "DK", "DM",
-        "DO", "EC", "SV", "EE", "FK", "FO", "FJ", "FI", "GE", "DE", "GI", "GR",
-        "GL", "GD", "GP", "GU", "GT", "GG", "HM", "HN", "HK", "HU", "IS", "IN",
-        "ID", "IQ", "IE", "IM", "IT", "JM", "JP", "JE", "JO", "KZ", "KI", "KW",
-        "KG", "LV", "LB", "LI", "LT", "LU", "MO", "MY", "MV", "MT", "MH", "MQ",
-        "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "NR", "NP", "NL", "NC",
-        "NI", "NU", "NF", "MK", "MP", "NO", "OM", "PW", "PA", "PG", "PY", "PE",
-        "PH", "PN", "PL", "PT", "QA", "SM", "SA", "RS", "SG", "SK", "SI", "SB",
-        "ZA", "GS", "KR", "ES", "LK", "BL", "SH", "KN", "LC", "MF", "PM", "VC",
-        "SJ", "SE", "CH", "TW", "TJ", "TH", "TO", "TT", "TR", "TC", "UM", "VI",
-        "UA", "AE", "GB", "US", "UY", "UZ", "VA", "VE", "VN", "WF", "EH"
-      ],
-    });
-
-    var iti2 = window.intlTelInput(input2, {
-      separateDialCode: false,
-      preferredCountries: ["US"],
-      allowDropdown: true,
-      hiddenInput: "full",
-      utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js",
-      onlyCountries: [
-        "AX", "AS", "AD", "AI", "AR", "AM", "AW", "AT", "BS", "BH", "BD", "BB",
-        "BE", "BZ", "BM", "BO", "BA", "BR", "IO", "VG", "BG", "KH", "CA", "KY",
-        "CL", "CN", "CX", "CC", "CO", "CK", "CR", "HR", "CY", "CZ", "DK", "DM",
-        "DO", "EC", "SV", "EE", "FK", "FO", "FJ", "FI", "GE", "DE", "GI", "GR",
-        "GL", "GD", "GP", "GU", "GT", "GG", "HM", "HN", "HK", "HU", "IS", "IN",
-        "ID", "IQ", "IE", "IM", "IT", "JM", "JP", "JE", "JO", "KZ", "KI", "KW",
-        "KG", "LV", "LB", "LI", "LT", "LU", "MO", "MY", "MV", "MT", "MH", "MQ",
-        "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "NR", "NP", "NL", "NC",
-        "NI", "NU", "NF", "MK", "MP", "NO", "OM", "PW", "PA", "PG", "PY", "PE",
-        "PH", "PN", "PL", "PT", "QA", "SM", "SA", "RS", "SG", "SK", "SI", "SB",
-        "ZA", "GS", "KR", "ES", "LK", "BL", "SH", "KN", "LC", "MF", "PM", "VC",
-        "SJ", "SE", "CH", "TW", "TJ", "TH", "TO", "TT", "TR", "TC", "UM", "VI",
-        "UA", "AE", "GB", "US", "UY", "UZ", "VA", "VE", "VN", "WF", "EH"
-      ],
-    });
-
-    function setInitialPhoneNumber(input, itiInstance) {
-      var countryData = itiInstance.getSelectedCountryData();
-      input.value = `+${countryData.dialCode} `;
-    }
-
-    setTimeout(function () {
-      setInitialPhoneNumber(input1, iti1);
-      setInitialPhoneNumber(input2, iti2);
-    }, 100);
-
-
-    input1.addEventListener("countrychange", function () {
-      setInitialPhoneNumber(input1, iti1);
-    });
-
-    input2.addEventListener("countrychange", function () {
-      setInitialPhoneNumber(input2, iti2);
-    });
-
-    document.querySelector("#international_PhoneNumber_countrycode").addEventListener("countrychange", function () {
-      var countySel = document.querySelector(".dropdown-countries");
-      var countryData = iti1.getSelectedCountryData();
-      var countryName = countryData.name;
-      var iso2 = countryData.iso2.toUpperCase();
-      var iso3 = convert_ISO_3166_2_to_1[iso2] || "N/A";
-      countySel.value = iso3;
-      var event = new Event('change');
-      countySel.dispatchEvent(event);
-    });
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        zf_ValidateAndSubmit();
+            let newHeight = formContainer.scrollHeight + 20;
+            window.parent.postMessage(newHeight, "*");
+            setTimeout(() => {
+              document.body.style.overflow = "";
+            }, 300);
+          }
+        });
       }
-    });
-  </script>
-  <script>
-    function setInitialPhoneNumber(input, itiInstance) {
-      var countryData = itiInstance.getSelectedCountryData();
-      input.value = `+${countryData.dialCode} `;
-    }
-  </script>
-  <!-- file upload -->
-  <script>
-    function setupFileUpload(inputId, previewId, textId, removeId, dropzoneId, errorId) {
-      let fileInput = document.getElementById(inputId);
-      let filePreview = document.getElementById(previewId);
-      let fileText = document.getElementById(textId);
-      let removeFile = document.getElementById(removeId);
-      let dropzone = document.getElementById(dropzoneId);
-      let errorMessage = document.getElementById(errorId);
-
-      fileInput.addEventListener("change", function () {
-        if (this.files.length > 0) {
-          fileText.textContent = this.files[0].name;
-          filePreview.style.display = "flex";
-          dropzone.style.display = "none";
-          errorMessage.style.display = "none";
-        }
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(updateHeight, 100);
       });
-
-      removeFile.addEventListener("click", function () {
-        fileInput.value = "";
-        fileText.textContent = "";
-        filePreview.style.display = "none";
-        dropzone.style.display = "block";
-        errorMessage.style.display = "block";
-      });
-    }
-
-
-    setupFileUpload("fileInput1", "filePreview1", "fileText1", "removeFile1", "dropzoneContainer1", "FileUpload2_error");
-    setupFileUpload("fileInput2", "filePreview2", "fileText2", "removeFile2", "dropzoneContainer2", "FileUpload3_error");
-  </script>
-  <!-- close the loqate dropdown -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const input = document.getElementById("searchInput");
       document.addEventListener("click", function (event) {
-        const loqateDropdown = document.querySelector(".dropdown-list");
-        if (!input.contains(event.target) && loqateDropdown && !loqateDropdown.contains(event.target)) {
-          loqateDropdown.style.display = "none";
+        if (event.target.matches(".next, .previous, .same")) {
+          setTimeout(updateHeight, 50);
         }
       });
-      input.addEventListener("input", function () {
-        const loqateDropdown = document.querySelector(".dropdown-list");
-        if (loqateDropdown) {
-          loqateDropdown.style.display = "block";
-        }
+      window.addEventListener("resize", updateHeight);
+      const observer = new MutationObserver(() => {
+        updateHeight();
       });
-    });
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const input = document.getElementById("searchAddress2");
-      document.addEventListener("click", function (event) {
-        const loqateDropdown = document.querySelector(".dropdown-list-SameASBilling");
-        if (!input.contains(event.target) && loqateDropdown && !loqateDropdown.contains(event.target)) {
-          loqateDropdown.style.display = "none";
-        }
+
+      observer.observe(document.querySelector("#form"), {
+        childList: true,
+        subtree: true,
       });
-      input.addEventListener("input", function () {
-        const loqateDropdown = document.querySelector(".dropdown-list-SameASBilling");
-        if (loqateDropdown) {
-          loqateDropdown.style.display = "block";
-        }
+    </script>
+
+    <!-- send event for Magento -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var submitButton = document.getElementById("submitBtn");
+        var checkbox = document.getElementById("DecisionBox1");
+
+        submitButton.addEventListener("click", function () {
+          console.log("Submit button clicked!");
+
+          // Store checkbox state in sessionStorage
+          if (checkbox.checked) {
+            sessionStorage.setItem("checkboxChecked", "true");
+          } else {
+            sessionStorage.setItem("checkboxChecked", "false");
+          }
+
+          console.log(
+            "Stored checkbox value:",
+            sessionStorage.getItem("checkboxChecked"),
+          );
+        });
       });
-    });
-  </script>
-  <!-- Dynamic Height for Ifram -->
-  <script>
-    function updateHeight() {
-      requestAnimationFrame(() => {
-        let formContainer = document.querySelector("#form");
-        if (formContainer) {
-          formContainer.style.display = "block";
-          void formContainer.offsetHeight;
+    </script>
 
-          let newHeight = formContainer.scrollHeight + 20;
-          window.parent.postMessage(newHeight, '*');
-          setTimeout(() => {
-            document.body.style.overflow = "";
-          }, 300);
-        }
-      });
-    }
-    document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(updateHeight, 100);
-    });
-    document.addEventListener("click", function (event) {
-      if (event.target.matches(".next, .previous, .same")) {
-        setTimeout(updateHeight, 50);
-      }
-    });
-    window.addEventListener("resize", updateHeight);
-    const observer = new MutationObserver(() => {
-      updateHeight();
-    });
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
 
-    observer.observe(document.querySelector("#form"), { childList: true, subtree: true });
-  </script>
+        const agentId = params.get("agentId");
+        const source = params.get("source");
 
-  <!-- send event for Magento -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var submitButton = document.getElementById("submitBtn");
-      var checkbox = document.getElementById("DecisionBox1");
-
-      submitButton.addEventListener("click", function () {
-        console.log("Submit button clicked!");
-
-        // Store checkbox state in sessionStorage
-        if (checkbox.checked) {
-          sessionStorage.setItem("checkboxChecked", "true");
-        } else {
-          sessionStorage.setItem("checkboxChecked", "false");
+        if (source) {
+          const sourceField = document.querySelector(
+            'input[name="SingleLine3"]',
+          );
+          if (sourceField) sourceField.value = source;
         }
 
-        console.log("Stored checkbox value:", sessionStorage.getItem("checkboxChecked"));
+        if (agentId) {
+          const agentIdField = document.querySelector(
+            'input[name="SingleLine9"]',
+          );
+          if (agentIdField) agentIdField.value = agentId;
+        }
       });
-    });
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const params = new URLSearchParams(window.location.search);
-
-      const agentId = params.get("agentId");
-      const source = params.get("source");
-
-      if (source) {
-        const sourceField = document.querySelector('input[name="SingleLine3"]');
-        if (sourceField) sourceField.value = source;
-      }
-
-      if (agentId) {
-        const agentIdField = document.querySelector('input[name="SingleLine9"]');
-        if (agentIdField) agentIdField.value = agentId;
-      }
-    });
-  </script>
-
-
-</body>
-
+    </script>
+  </body>
 </html>

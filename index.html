@@ -139,6 +139,31 @@
               <div class="zf-clearBoth"></div>
             </div>
 
+            <div class="zf-tempFrmWrapper zf-small" style="display: none">
+              <label class="zf-labelName"> Team </label>
+              <div class="zf-tempContDiv">
+                <span>
+                  <input
+                    type="text"
+                    name="SingleLine10"
+                    checktype="c1"
+                    value=""
+                    maxlength="255"
+                    fieldType="1"
+                    placeholder=""
+                  />
+                </span>
+                <p
+                  id="SingleLine10_error"
+                  class="zf-errorMessage"
+                  style="display: none"
+                >
+                  Invalid value
+                </p>
+              </div>
+              <div class="zf-clearBoth"></div>
+            </div>
+
             <ul>
               <fieldset>
                 <!---------Section Starts Here---------->
@@ -1631,6 +1656,7 @@
         "SingleLine4",
         "Date1",
         "FileUpload2",
+        "SingleLine10"
       ];
       var isSalesIQIntegrationEnabled = false;
       var salesIQFieldsArray = [];
@@ -2444,6 +2470,7 @@
 
         const agentId = params.get("agentId");
         const source = params.get("source");
+        const team = params.get("team");
 
         if (source) {
           const sourceField = document.querySelector(
@@ -2457,6 +2484,17 @@
             'input[name="SingleLine9"]',
           );
           if (agentIdField) agentIdField.value = agentId;
+        }
+
+        // Team — passed by the dashboard iframe wrapper based on the logged-in
+        // agent's team. If the Zoho Form's Team field has a different API
+        // name (Zoho auto-numbers SingleLine fields), update both here AND in
+        // the hidden input above to match.
+        if (team) {
+          const teamField = document.querySelector(
+            'input[name="SingleLine10"]',
+          );
+          if (teamField) teamField.value = team;
         }
       });
     </script>

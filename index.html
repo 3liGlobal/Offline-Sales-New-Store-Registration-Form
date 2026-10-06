@@ -63,6 +63,12 @@
           name="zc_gad"
           value=""
         /><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+        <!-- Store coordinates — filled on submit by fillStoreCoordinates() in
+             js/validation.js from the shipping address. The name attributes
+             must match the Field Link Names of the hidden Latitude/Longitude
+             fields in the Zoho Form, or the values are silently dropped. -->
+        <input type="hidden" name="Latitude" id="storeLatitude" value="" />
+        <input type="hidden" name="Longitude" id="storeLongitude" value="" />
         <div class="zf-templateWrapper">
           <!---------template Header Starts Here---------->
           <ul id="progressbar">

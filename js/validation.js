@@ -139,7 +139,9 @@ $(document).ready(function () {
 
     if (zf_ValidateAndSubmit()) {
       console.log("Form validation passed, submitting...");
-      $("#form").unbind("submit").submit();
+      fillStoreCoordinates().then(function () {
+        $("#form").unbind("submit").submit();
+      });
     } else {
       console.log("Form validation failed.");
       $btn.prop('disabled', false).attr('aria-disabled', 'false');
@@ -155,6 +157,68 @@ $(document).ready(function () {
     $(".progress-bar").css("width", percent + "%");
   }
 });
+
+// Store coordinates
+// Geocodes the shipping (store) address and writes the result into the hidden
+// Latitude/Longitude inputs so Zoho receives them with the submission. The
+// route planner and check-in verification (400m radius) depend on these, so
+// only street-level matches are accepted — a city-level guess is worse than
+// leaving them empty. Never blocks submission: on failure or timeout the
+// fields are just left blank.
+var GOOGLE_GEOCODE_KEY = "AIzaSyBIJWS1YvuDWqTXSf3hhmcOEhBqCqnCz_g";
+var PRECISE_LOCATION_TYPES = ["ROOFTOP", "RANGE_INTERPOLATED", "GEOMETRIC_CENTER"];
+var GEOCODE_TIMEOUT_MS = 6000;
+
+function buildStoreAddressQuery() {
+  var street = $.trim($('input[name="Address_AddressLine1"]').val() || "");
+  var city = $.trim($('input[name="Address_City"]').val() || "");
+  var state =
+    $.trim($(".state-dropdown").val() || "") ||
+    $.trim($(".state-text").val() || "") ||
+    $.trim($("#stateLabel").val() || "");
+  var zip = $.trim($('input[name="Address_ZipCode"]').val() || "");
+  var country = $.trim($("#countryF1").find(":selected").val() || "");
+
+  if (!street || !city) return "";
+  return [street, city, $.trim(state + " " + zip), country]
+    .filter(function (p) { return p; })
+    .join(", ");
+}
+
+function fillStoreCoordinates() {
+  var $lat = $("#storeLatitude");
+  var $lng = $("#storeLongitude");
+  $lat.val("");
+  $lng.val("");
+
+  var query = buildStoreAddressQuery();
+  if (!query) return Promise.resolve();
+
+  var url =
+    "https://maps.googleapis.com/maps/api/geocode/json?address=" +
+    encodeURIComponent(query) +
+    "&key=" + GOOGLE_GEOCODE_KEY;
+
+  var lookup = fetch(url)
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      var top = data && data.status === "OK" && data.results && data.results[0];
+      if (!top || PRECISE_LOCATION_TYPES.indexOf(top.geometry.location_type) === -1) {
+        console.warn("Store address not geocoded precisely:", query, data && data.status);
+        return;
+      }
+      $lat.val(String(top.geometry.location.lat));
+      $lng.val(String(top.geometry.location.lng));
+    })
+    .catch(function (err) {
+      console.warn("Store address geocoding failed:", err);
+    });
+
+  var timeout = new Promise(function (resolve) {
+    setTimeout(resolve, GEOCODE_TIMEOUT_MS);
+  });
+  return Promise.race([lookup, timeout]);
+}
 
 function updateButtons() {
   $(".previous").toggle(current > 1);
